@@ -1,15 +1,30 @@
-[gd_scene load_steps=3 format=3 uid="uid://d2noon1vftiyp"]
+[gd_scene load_steps=5 format=3 uid="uid://d2noon1vftiyp"]
 
 [ext_resource type="Script" uid="uid://b6tjlvlwgmbme" path="res://Scripts/Player_Script.gd" id="1_wtcfe"]
+[ext_resource type="Texture2D" uid="uid://cararyfg0c133" path="res://Sprite Frames/icon.svg" id="2_v1qfn"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_y32ns"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_hh5uf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_v1qfn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hh5uf"]
+size = Vector2(116, 120)
 
 [node name="Node2D" type="Node2D"]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="PLayer" type="CharacterBody2D" parent="."]
 script = ExtResource("1_wtcfe")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-shape = SubResource("CircleShape2D_y32ns")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PLayer"]
+sprite_frames = SubResource("SpriteFrames_hh5uf")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PLayer"]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_hh5uf")
