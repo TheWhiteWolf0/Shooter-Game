@@ -8,7 +8,7 @@ extends CharacterBody2D
 
 #@onready var animated_sprite_2d: AnimatedSprite2D =$"."
 
-@export var speed = 400
+@export var speed = 500
 #var MousePos:float = get_global_mouse_position().x
 
 func get_input():
@@ -21,6 +21,8 @@ func _physics_process(delta):
 	
 	
 	
-	if Input.is_action_just_pressed("Shoot"):
-		get_global_mouse_position()
-		print()
+	#if Input.is_action_just_pressed("Shoot"):
+	#	get_global_mouse_position()
+	#	print()
+	
+	look_at(get_global_mouse_position())
