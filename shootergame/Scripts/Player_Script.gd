@@ -7,11 +7,14 @@
 extends CharacterBody2D
 
 #@onready var animated_sprite_2d: AnimatedSprite2D =$"."
-
+@onready var shooting_point: Marker2D = $Polygon2D/ShootingPoint
 @export var speed = 500
 var bullet_speed = 2000
 var bullet = preload("res://Scenes/Bullet.tscn")
-@onready var shooting_point: Marker2D = $Polygon2D/ShootingPoint
+var ammo:int = 15
+
+
+var Can_Fire:bool = true
 
 
 func get_input():
@@ -19,8 +22,9 @@ func get_input():
 	velocity = input_direction * speed
 	look_at(get_global_mouse_position())
 	
-	if Input.is_action_just_pressed("Shoot"):
+	if Input.is_action_just_pressed("Shoot") and Can_Fire and ammo > 0:
 		fire()
+		ammo = ammo - 1
 	
 
 

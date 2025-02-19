@@ -42,3 +42,4 @@ script = ExtResource("3_hh5uf")
 
 [node name="ShootingPoint" type="Marker2D" parent="PLayer/Polygon2D"]
 position = Vector2(-0.0171871, -4.2234)
+scale = Vector2(1, 1)
