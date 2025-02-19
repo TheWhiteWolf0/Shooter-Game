@@ -10,7 +10,8 @@ extends CharacterBody2D
 
 @export var speed = 500
 var bullet_speed = 2000
-var bullet = preload("res://Scenes/bullet.tscn")
+var bullet = preload("res://Scenes/Bullet.tscn")
+@onready var shooting_point: Marker2D = $Polygon2D/ShootingPoint
 
 
 func get_input():
@@ -30,7 +31,8 @@ func _physics_process(delta):
 	
 func fire():
 	var bullet_instance = bullet.instantiate()
-	bullet_instance.position = get_global_position()
+	bullet_instance.global_position = shooting_point.global_position
 	bullet_instance.rotation_degrees = rotation_degrees
-	bullet_instance.apply_impulse(Vector2(), Vector2(bullet_speed, 0).rotated(rotation))
+	#bullet_instance.apply_impulse(Vector2(), Vector2(bullet_speed, 0).rotated(rotation))
 	get_tree().get_root().call_deferred("add_child", bullet_instance)
+	
