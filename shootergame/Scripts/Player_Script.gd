@@ -13,6 +13,7 @@ var bullet_speed = 6000
 var bullet = preload("res://Scenes/Bullet.tscn")
 var reserve_ammo:int = 40
 var mag_ammo:int = 5
+var player_Health:int = 100
 
 var Can_Fire:bool = true
 var Can_reload:bool = false
@@ -49,6 +50,7 @@ func _physics_process(delta):
 	player_weapon()
 	$"../CanvasLayer/reserve_ammo".text = "ReserveAmmo: " + str(reserve_ammo)
 	$"../CanvasLayer/mag_ammo".text = "MagAmmo: " + str(mag_ammo)
+	$"../CanvasLayer/player_Health".text = "Health: " + str(player_Health)
 	
 	
 func fire():
