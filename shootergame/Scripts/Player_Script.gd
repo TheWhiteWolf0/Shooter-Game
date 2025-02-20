@@ -11,12 +11,11 @@ extends CharacterBody2D
 @export var speed = 500
 var bullet_speed = 6000
 var bullet = preload("res://Scenes/Bullet.tscn")
-var reserve_ammo:int = 10
-var mag_ammo:int = 2
-
+var reserve_ammo:int = 40
+var mag_ammo:int = 5
 
 var Can_Fire:bool = true
-
+var Can_reload:bool = true 
 
 func get_input():
 	var input_direction = Input.get_vector("Left", "Right", "Up", "Down")
@@ -26,10 +25,14 @@ func get_input():
 	if Input.is_action_just_pressed("Shoot") and Can_Fire and mag_ammo > 0:
 		fire()
 		mag_ammo = mag_ammo - 1
+		$"../CanvasLayer/mag_ammo".text = "MagAmmo: " + str(mag_ammo)
 		
-	if Input.is_action_just_pressed("Reload") and reserve_ammo > 0:
-		mag_ammo = mag_ammo + 2
-		reserve_ammo = reserve_ammo - 2
+	if Input.is_action_just_pressed("Reload") and Can_reload and reserve_ammo > 0:
+		mag_ammo = mag_ammo + 5
+		reserve_ammo = reserve_ammo - 5
+		$"../CanvasLayer/reserve_ammo".text = "ReserveAmmo: " + str(reserve_ammo)
+		
+
 		
 	
 
