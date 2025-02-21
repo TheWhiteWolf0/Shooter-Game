@@ -39,8 +39,6 @@ func player_weapon():
 		mag_ammo = mag_ammo + 5
 		reserve_ammo = reserve_ammo - 5
 		
-		
-	
 	return
 
 
@@ -53,6 +51,7 @@ func _physics_process(delta):
 	$"../CanvasLayer/player_Health".text = "Health: " + str(player_Health)
 	
 	
+	
 func fire():
 	var bullet_instance = bullet.instantiate()
 	bullet_instance.global_position = shooting_point.global_position
@@ -60,6 +59,12 @@ func fire():
 	#bullet_instance.apply_impulse(Vector2(), Vector2(bullet_speed, 0).rotated(rotation))
 	get_tree().get_root().call_deferred("add_child", bullet_instance)
 	
-#func reload():
+
 	
-	
+
+
+#func ammo_pack():
+	#if area_entered(area: Area2D):
+		#reserve_ammo = reserve_ammo + 10
+		#queue_free()
+	#pass # Replace with function body.
