@@ -62,16 +62,13 @@ func fire():
 
 	
 
-
-#func ammo_pack():
-	#if 
-		#reserve_ammo = reserve_ammo + 10
-		#queue_free()
-	#pass # Replace with function body.
-
-
+#Ammo pack#
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	print("Entered")
 	reserve_ammo = reserve_ammo + 10
-	#queue_free()
+	pass # Replace with function body.
+
+func _on_area_2d_body_exited(body: Node2D) -> void:
+	print("Exited")
+	#$"../Area2D" = false
 	pass # Replace with function body.
