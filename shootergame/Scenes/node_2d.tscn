@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://d2noon1vftiyp"]
+[gd_scene load_steps=10 format=3 uid="uid://d2noon1vftiyp"]
 
 [ext_resource type="Script" uid="uid://b6tjlvlwgmbme" path="res://Scripts/Player_Script.gd" id="1_wtcfe"]
 [ext_resource type="Texture2D" uid="uid://cararyfg0c133" path="res://Sprite Frames/icon.svg" id="2_v1qfn"]
@@ -23,6 +23,9 @@ size = Vector2(116, 120)
 size = Vector2(14, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6whob"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tx0tn"]
+size = Vector2(118, 119)
 
 [node name="Node2D" type="Node2D"]
 
@@ -73,14 +76,14 @@ offset_bottom = 73.0
 text = "Health: "
 horizontal_alignment = 1
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="AmmoPack" type="Area2D" parent="."]
 position = Vector2(976, 198)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AmmoPack"]
 position = Vector2(1.52588e-05, 0)
 shape = SubResource("RectangleShape2D_u7krg")
 
-[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+[node name="Sprite2D" type="Sprite2D" parent="AmmoPack"]
 scale = Vector2(0.0155556, 0.052459)
 texture = ExtResource("4_6whob")
 
@@ -100,6 +103,17 @@ position = Vector2(980.248, 494.931)
 scale = Vector2(0.0316623, -0.0116451)
 texture = ExtResource("4_6whob")
 
-[connection signal="body_entered" from="Area2D" to="Player" method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Area2D" to="Player" method="_on_area_2d_body_exited"]
+[node name="DamageAera" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageAera"]
+position = Vector2(198, 312)
+shape = SubResource("RectangleShape2D_tx0tn")
+
+[node name="Sprite2D" type="Sprite2D" parent="DamageAera"]
+position = Vector2(197, 314)
+texture = ExtResource("2_v1qfn")
+
+[connection signal="body_entered" from="AmmoPack" to="Player" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="AmmoPack" to="Player" method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="HealthPack" to="Player" method="_on_health_pack_body_entered"]
+[connection signal="body_entered" from="DamageAera" to="Player" method="_on_damage_aera_body_entered"]
