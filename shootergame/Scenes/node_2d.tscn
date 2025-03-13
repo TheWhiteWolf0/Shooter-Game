@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://d2noon1vftiyp"]
+[gd_scene load_steps=9 format=3 uid="uid://d2noon1vftiyp"]
 
 [ext_resource type="Script" uid="uid://b6tjlvlwgmbme" path="res://Scripts/Player_Script.gd" id="1_wtcfe"]
 [ext_resource type="Texture2D" uid="uid://cararyfg0c133" path="res://Sprite Frames/icon.svg" id="2_v1qfn"]
@@ -21,6 +21,8 @@ size = Vector2(116, 120)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u7krg"]
 size = Vector2(14, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6whob"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -78,9 +80,26 @@ position = Vector2(976, 198)
 position = Vector2(1.52588e-05, 0)
 shape = SubResource("RectangleShape2D_u7krg")
 
-[node name="Sprite2D" type="Sprite2D" parent="Area2D/CollisionShape2D"]
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
 scale = Vector2(0.0155556, 0.052459)
+texture = ExtResource("4_6whob")
+
+[node name="HealthPack" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HealthPack"]
+position = Vector2(980.248, 494.932)
+shape = SubResource("RectangleShape2D_6whob")
+
+[node name="Sprite2D" type="Sprite2D" parent="HealthPack"]
+position = Vector2(980.248, 494.931)
+scale = Vector2(-0.00833745, 0.045677)
+texture = ExtResource("4_6whob")
+
+[node name="Sprite2D2" type="Sprite2D" parent="HealthPack"]
+position = Vector2(980.248, 494.931)
+scale = Vector2(0.0316623, -0.0116451)
 texture = ExtResource("4_6whob")
 
 [connection signal="body_entered" from="Area2D" to="Player" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Player" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="HealthPack" to="Player" method="_on_health_pack_body_entered"]

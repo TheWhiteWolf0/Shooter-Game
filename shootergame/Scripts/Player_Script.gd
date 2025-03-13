@@ -69,14 +69,12 @@ func fire():
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	print("Entered")
 	reserve_ammo = reserve_ammo + 10
-	$"../Area2D/CollisionShape2D".queue_free()
-	
+	$"../Area2D".queue_free()
 	pass # Replace with function body.
 	
-		
 	
-
-#func _on_area_2d_body_exited(body: Node2D) -> void:
-	#print("Exited")
-	
-	#pass # Replace with function body.
+func _on_health_pack_body_entered(body: Node2D) -> void:
+	print("Entered")
+	player_Health = player_Health + 25
+	$"../HealthPack".queue_free()
+	pass # Replace with function body.
