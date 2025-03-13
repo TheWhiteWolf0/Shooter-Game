@@ -19,6 +19,8 @@ var Can_Fire:bool = true
 var Can_reload:bool = false
 var ammo_diff:int 
 
+var ammo_pack:bool = true
+
 func get_input():
 	var input_direction = Input.get_vector("Left", "Right", "Up", "Down")
 	velocity = input_direction * speed
@@ -46,9 +48,11 @@ func _physics_process(delta):
 	get_input()
 	move_and_slide()
 	player_weapon()
+	
 	$"../CanvasLayer/reserve_ammo".text = "ReserveAmmo: " + str(reserve_ammo)
 	$"../CanvasLayer/mag_ammo".text = "MagAmmo: " + str(mag_ammo)
 	$"../CanvasLayer/player_Health".text = "Health: " + str(player_Health)
+	
 	
 	
 	
@@ -60,15 +64,19 @@ func fire():
 	get_tree().get_root().call_deferred("add_child", bullet_instance)
 	
 
-	
 
 #Ammo pack#
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	print("Entered")
 	reserve_ammo = reserve_ammo + 10
+	$"../Area2D/CollisionShape2D".queue_free()
+	
 	pass # Replace with function body.
+	
+		
+	
 
-func _on_area_2d_body_exited(body: Node2D) -> void:
-	print("Exited")
-	#$"../Area2D" = false
-	pass # Replace with function body.
+#func _on_area_2d_body_exited(body: Node2D) -> void:
+	#print("Exited")
+	
+	#pass # Replace with function body.
