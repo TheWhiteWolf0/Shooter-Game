@@ -23,6 +23,8 @@ var ammo_pack:bool = true
 
 var fire_damage:float = 0.0
 
+var fireDamage: bool = false
+
 func get_input():
 	var input_direction = Input.get_vector("Left", "Right", "Up", "Down")
 	velocity = input_direction * speed
@@ -84,20 +86,20 @@ func _on_health_pack_body_entered(body: Node2D) -> void:
 
 func _on_damage_aera_body_entered(body: Node2D) -> void:
 	print("Entered")
+	fireDamage = true
+	#_Damage()
 	$"../FireDamage".start()
 	player_Health = player_Health - (5 * fire_damage)
-	#$"../DamageAera".queue_free()
 	pass # Replace with function body.
-	
-#func _on_damage_aera_body_exited(body: Node2D) -> void:
-	#$"../FireDamage".stop()
-	
-	
-	pass # Replace with function body.
-
-
-
 
 func _on_fire_damage_timeout() -> void:
 	fire_damage += 0.2
 	pass # Replace with function body.
+	#get_process_delta_time()
+
+#func _process(delta: float) -> void:
+#func _Damage():
+	#while fireDamage == true:
+		#player_Health = player_Health - (1 * fire_damage)
+	
+	
