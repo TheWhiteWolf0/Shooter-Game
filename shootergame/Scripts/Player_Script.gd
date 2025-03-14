@@ -8,12 +8,16 @@ extends CharacterBody2D
 
 #@onready var animated_sprite_2d: AnimatedSprite2D =$"."
 @onready var shooting_point: Marker2D = $Polygon2D/ShootingPoint
-@export var speed = 500
-var bullet_speed = 6000
+@export var speed = 250
+var bullet_speed = 7000
 var bullet = preload("res://Scenes/Bullet.tscn")
 var reserve_ammo:int = 40
 var mag_ammo:int = 5
+
 var player_Health:int = 100
+#var player_Shield:int = 0
+#var Max_Player_Health = 0
+
 
 var Can_Fire:bool = true
 var Can_reload:bool = false
@@ -52,6 +56,7 @@ func _physics_process(delta):
 	get_input()
 	move_and_slide()
 	player_weapon()
+	#Max_Player_Health = player_Health + player_Shield
 	
 	$"../CanvasLayer/reserve_ammo".text = "ReserveAmmo: " + str(reserve_ammo)
 	$"../CanvasLayer/mag_ammo".text = "MagAmmo: " + str(mag_ammo)
@@ -82,7 +87,12 @@ func _on_health_pack_body_entered(body: Node2D) -> void:
 	player_Health = player_Health + 25
 	$"../HealthPack".queue_free()
 	pass # Replace with function body.
-	
+
+#func _on_shield_pack_body_entered(body: Node2D) -> void:
+	#Max_Player_Health = player_Health + (player_Shield + 25)
+	#$"../ShieldPack".queue_free()
+	#pass # Replace with function body.
+
 
 func _on_damage_aera_body_entered(body: Node2D) -> void:
 	print("Entered")
@@ -94,9 +104,6 @@ func _on_damage_aera_body_entered(body: Node2D) -> void:
 		
 	
 	pass # Replace with function body.
-
-
-
 func _on_fire_damage_timeout() -> void:
 	fire_damage += 0.2
 	pass # Replace with function body.

@@ -31,6 +31,7 @@ size = Vector2(118, 119)
 
 [node name="Player" type="CharacterBody2D" parent="."]
 position = Vector2(551, 287)
+scale = Vector2(0.405132, 0.431241)
 motion_mode = 1
 slide_on_ceiling = false
 script = ExtResource("1_wtcfe")
@@ -104,6 +105,8 @@ scale = Vector2(0.0316623, -0.0116451)
 texture = ExtResource("4_6whob")
 
 [node name="DamageAera" type="Area2D" parent="."]
+position = Vector2(-4, -3)
+scale = Vector2(0.586049, 0.567705)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DamageAera"]
 position = Vector2(198, 312)
@@ -117,9 +120,30 @@ texture = ExtResource("2_v1qfn")
 process_callback = 0
 one_shot = true
 
+[node name="ShieldPack" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ShieldPack"]
+position = Vector2(622.179, 514.965)
+scale = Vector2(0.634715, 1.04048)
+shape = SubResource("RectangleShape2D_6whob")
+
+[node name="Sprite2D2" type="Sprite2D" parent="ShieldPack"]
+position = Vector2(622, 515)
+rotation = 1.57095
+scale = Vector2(0.0207017, 0.0380701)
+skew = 0.000253797
+texture = ExtResource("4_6whob")
+
+[node name="Sprite2D" type="Sprite2D" parent="ShieldPack"]
+position = Vector2(622.179, 514.964)
+rotation = 3.14159
+scale = Vector2(0.0138075, -0.0358711)
+texture = ExtResource("4_6whob")
+
 [connection signal="body_entered" from="AmmoPack" to="Player" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="AmmoPack" to="Player" method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="HealthPack" to="Player" method="_on_health_pack_body_entered"]
 [connection signal="body_entered" from="DamageAera" to="Player" method="_on_damage_aera_body_entered"]
 [connection signal="body_exited" from="DamageAera" to="Player" method="_on_damage_aera_body_exited"]
 [connection signal="timeout" from="FireDamage" to="Player" method="_on_fire_damage_timeout"]
+[connection signal="body_entered" from="ShieldPack" to="Player" method="_on_shield_pack_body_entered"]
