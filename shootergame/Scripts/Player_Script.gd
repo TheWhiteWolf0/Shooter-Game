@@ -62,7 +62,7 @@ func _physics_process(delta):
 	$"../CanvasLayer/mag_ammo".text = "MagAmmo: " + str(mag_ammo)
 	$"../CanvasLayer/player_Health".text = "Health: " + str(player_Health)
 	
-	
+
 	
 	
 func fire():
@@ -107,3 +107,12 @@ func _on_damage_aera_body_entered(body: Node2D) -> void:
 func _on_fire_damage_timeout() -> void:
 	fire_damage += 0.2
 	pass # Replace with function body.
+
+@onready var terget = $"."
+var enemy_speed = 200
+
+#func _physics_process(delta: float) -> void:
+	#var direction = (terget.position - position).normalized()
+	#velocity = direction * enemy_speed
+	#look_at(terget.position)
+	#move_and_slide()
