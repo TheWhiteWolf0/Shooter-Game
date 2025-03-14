@@ -87,10 +87,19 @@ func _on_health_pack_body_entered(body: Node2D) -> void:
 func _on_damage_aera_body_entered(body: Node2D) -> void:
 	print("Entered")
 	fireDamage = true
-	#_Damage()
-	$"../FireDamage".start()
-	player_Health = player_Health - (5 * fire_damage)
+	#$"../FireDamage".start()
+	#fire_damage = fire_damage + 0.2
+	print("Fire Damage is True")
+	#player_Health = player_Health - (5 * fire_damage)
+	if fireDamage == true:
+		$"../FireDamage".start()
+		fire_damage = fire_damage + 0.2
+		player_Health = player_Health - (5 * fire_damage)
+		
+	
 	pass # Replace with function body.
+
+
 
 func _on_fire_damage_timeout() -> void:
 	fire_damage += 0.2
