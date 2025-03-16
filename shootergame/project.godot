@@ -17,7 +17,7 @@ config/icon="res://Sprite Frames/icon.svg"
 
 [autoload]
 
-GlobalVariables="*res://GlobalVariables/GlobalVariables.gd"
+GlobalVariables="*res://GlobalVariables/GloabalVariables.gd"
 
 [input]
 

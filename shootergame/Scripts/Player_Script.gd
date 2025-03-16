@@ -11,7 +11,7 @@ extends CharacterBody2D
 @export var speed = 250
 var bullet_speed = 7000
 var bullet = preload("res://Scenes/Bullet.tscn")
-var reserve_ammo:int = 40
+#var reserve_ammo:int = 40
 var mag_ammo:int = 5
 
 #var player_Health:int = 100
@@ -40,14 +40,14 @@ func player_weapon():
 		Can_reload = true
 	
 	if Input.is_action_just_pressed("Shoot") and Can_Fire and mag_ammo > 0:
-		ammo_diff = reserve_ammo - mag_ammo
+		#ammo_diff = reserve_ammo - mag_ammo
 		fire()
 		mag_ammo = mag_ammo - 1
 
 		
-	if Input.is_action_just_pressed("Reload") and Can_reload and reserve_ammo > 0 and mag_ammo == 0:
+	if Input.is_action_just_pressed("Reload") and Can_reload and GlobalVariables.reserve_ammo > 0 and mag_ammo == 0:
 		mag_ammo = mag_ammo + 5
-		reserve_ammo = reserve_ammo - 5
+		GlobalVariables.reserve_ammo = GlobalVariables.reserve_ammo - 5
 		
 	return
 
@@ -58,7 +58,7 @@ func _physics_process(delta):
 	player_weapon()
 	#Max_Player_Health = player_Health + player_Shield
 	
-	$"../CanvasLayer/reserve_ammo".text = "ReserveAmmo: " + str(reserve_ammo)
+	$"../CanvasLayer/reserve_ammo".text = "ReserveAmmo: " + str(GlobalVariables.reserve_ammo)
 	$"../CanvasLayer/mag_ammo".text = "MagAmmo: " + str(mag_ammo)
 	$"../CanvasLayer/player_Health".text = "Health: " + str(GlobalVariables.player_Health)
 	
@@ -72,27 +72,6 @@ func fire():
 	#bullet_instance.apply_impulse(Vector2(), Vector2(bullet_speed, 0).rotated(rotation))
 	get_tree().get_root().call_deferred("add_child", bullet_instance)
 	
-
-
-#Ammo pack#
-func _on_area_2d_body_entered(body: Node2D) -> void:
-	print("Entered")
-	reserve_ammo = reserve_ammo + 10
-	$"../AmmoPack".queue_free()
-	pass # Replace with function body.
-	
-	
-func _on_health_pack_body_entered(body: Node2D) -> void:
-	print("Entered")
-	GlobalVariables.player_Health = GlobalVariables.player_Health + 25
-	$"../HealthPack".queue_free()
-	pass # Replace with function body.
-
-#func _on_shield_pack_body_entered(body: Node2D) -> void:
-	#Max_Player_Health = player_Health + (player_Shield + 25)
-	#$"../ShieldPack".queue_free()
-	#pass # Replace with function body.
-
 
 func _on_damage_aera_body_entered(body: Node2D) -> void:
 	print("Entered")
