@@ -14,7 +14,7 @@ var bullet = preload("res://Scenes/Bullet.tscn")
 var reserve_ammo:int = 40
 var mag_ammo:int = 5
 
-var player_Health:int = 100
+#var player_Health:int = 100
 #var player_Shield:int = 0
 #var Max_Player_Health = 0
 
@@ -60,7 +60,7 @@ func _physics_process(delta):
 	
 	$"../CanvasLayer/reserve_ammo".text = "ReserveAmmo: " + str(reserve_ammo)
 	$"../CanvasLayer/mag_ammo".text = "MagAmmo: " + str(mag_ammo)
-	$"../CanvasLayer/player_Health".text = "Health: " + str(player_Health)
+	$"../CanvasLayer/player_Health".text = "Health: " + str(GlobalVariables.player_Health)
 	
 
 	
@@ -84,7 +84,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	
 func _on_health_pack_body_entered(body: Node2D) -> void:
 	print("Entered")
-	player_Health = player_Health + 25
+	GlobalVariables.player_Health = GlobalVariables.player_Health + 25
 	$"../HealthPack".queue_free()
 	pass # Replace with function body.
 
@@ -100,7 +100,7 @@ func _on_damage_aera_body_entered(body: Node2D) -> void:
 	if fireDamage == true:
 		$"../FireDamage".start()
 		fire_damage = fire_damage + 1
-		player_Health = player_Health - (5 * fire_damage)
+		GlobalVariables.player_Health = GlobalVariables.player_Health - (5 * fire_damage)
 		
 	
 	pass # Replace with function body.

@@ -15,6 +15,10 @@ run/main_scene="uid://d2noon1vftiyp"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://Sprite Frames/icon.svg"
 
+[autoload]
+
+GlobalVariables="*res://GlobalVariables/GlobalVariables.gd"
+
 [input]
 
 Up={
