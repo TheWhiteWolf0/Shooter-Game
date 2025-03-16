@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjw3uvhgoe0aa"]
+
+[ext_resource type="Script" uid="uid://k7wg4ampomjs" path="res://Scripts/hud.gd" id="1_e0onf"]
+
+[node name="HUD" type="Node2D"]
+script = ExtResource("1_e0onf")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="mag_ammo" type="Label" parent="CanvasLayer"]
+offset_left = 5.0
+offset_top = 25.0
+offset_right = 98.0
+offset_bottom = 48.0
+text = "MagAmmo: "
+
+[node name="reserve_ammo" type="Label" parent="CanvasLayer"]
+offset_left = 4.0
+offset_top = 3.0
+offset_right = 125.0
+offset_bottom = 26.0
+text = "ReserveAmmo: "
+
+[node name="player_Health" type="Label" parent="CanvasLayer"]
+offset_left = 5.0
+offset_top = 50.0
+offset_right = 65.0
+offset_bottom = 73.0
+text = "Health: "
+horizontal_alignment = 1
