@@ -1,0 +1,90 @@
+[gd_scene load_steps=4 format=3 uid="uid://c24l7jjbv3iqt"]
+
+[ext_resource type="Script" uid="uid://b4psyrixwl2aw" path="res://Scripts/DamageArea.gd" id="1_heqr2"]
+[ext_resource type="Texture2D" uid="uid://cararyfg0c133" path="res://Sprite Frames/icon.svg" id="2_2os52"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_unyfy"]
+size = Vector2(123, 120)
+
+[node name="DamageArea" type="Node2D"]
+
+[node name="Fire" type="Area2D" parent="."]
+scale = Vector2(0.288449, 0.290513)
+script = ExtResource("1_heqr2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fire"]
+modulate = Color(0.968627, 0.227451, 0.254902, 1)
+position = Vector2(-0.5, 1)
+shape = SubResource("RectangleShape2D_unyfy")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Fire"]
+position = Vector2(48.5354, -65.4016)
+scale = Vector2(0.253344, 0.306363)
+texture = ExtResource("2_2os52")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Fire"]
+position = Vector2(80.3316, -87.9786)
+scale = Vector2(0.131282, 0.172049)
+texture = ExtResource("2_2os52")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Fire"]
+position = Vector2(24.2677, -75.7281)
+scale = Vector2(0.253344, 0.306363)
+texture = ExtResource("2_2os52")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Fire"]
+position = Vector2(3.46681, -61.9593)
+scale = Vector2(0.253344, 0.306363)
+texture = ExtResource("2_2os52")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Fire"]
+position = Vector2(-13.2725, -125.843)
+scale = Vector2(0.17201, 0.1488)
+texture = ExtResource("2_2os52")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Fire"]
+position = Vector2(45.6634, -122.4)
+scale = Vector2(0.160424, 0.191198)
+texture = ExtResource("2_2os52")
+
+[node name="Sprite2D8" type="Sprite2D" parent="Fire"]
+position = Vector2(-72.2083, -101.747)
+scale = Vector2(0.171801, 0.198089)
+texture = ExtResource("2_2os52")
+
+[node name="Sprite2D9" type="Sprite2D" parent="Fire"]
+position = Vector2(-41.6018, -65.4015)
+scale = Vector2(0.253344, 0.306363)
+texture = ExtResource("2_2os52")
+
+[node name="Sprite2D10" type="Sprite2D" parent="Fire"]
+position = Vector2(-58.9359, -51.6328)
+scale = Vector2(0.253344, 0.306363)
+texture = ExtResource("2_2os52")
+
+[node name="Sprite2D11" type="Sprite2D" parent="Fire"]
+position = Vector2(55.469, -30.9797)
+scale = Vector2(0.253344, 0.306363)
+texture = ExtResource("2_2os52")
+
+[node name="Sprite2D12" type="Sprite2D" parent="Fire"]
+position = Vector2(-20.8009, -55.075)
+scale = Vector2(0.253344, 0.306363)
+texture = ExtResource("2_2os52")
+
+[node name="Sprite2D13" type="Sprite2D" parent="Fire"]
+position = Vector2(-65.2747, -174.033)
+scale = Vector2(0.190129, 0.148677)
+texture = ExtResource("2_2os52")
+
+[node name="Sprite2D14" type="Sprite2D" parent="Fire"]
+position = Vector2(38.7298, -180.918)
+scale = Vector2(0.165343, 0.185076)
+texture = ExtResource("2_2os52")
+
+[node name="Sprite2D" type="Sprite2D" parent="Fire/Sprite2D14"]
+position = Vector2(-230.641, 1004.34)
+scale = Vector2(6.04803, 5.4032)
+texture = ExtResource("2_2os52")
+
+[connection signal="body_entered" from="Fire" to="Fire" method="_on_body_entered"]

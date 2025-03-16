@@ -1,11 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://d2noon1vftiyp"]
+[gd_scene load_steps=9 format=3 uid="uid://d2noon1vftiyp"]
 
 [ext_resource type="Script" uid="uid://b6tjlvlwgmbme" path="res://Scripts/Player_Script.gd" id="1_wtcfe"]
 [ext_resource type="Texture2D" uid="uid://cararyfg0c133" path="res://Sprite Frames/icon.svg" id="2_v1qfn"]
 [ext_resource type="Script" path="res://Scripts/Gun(Prechance).gd" id="3_hh5uf"]
-[ext_resource type="Texture2D" uid="uid://b3uxene6hujm7" path="res://Sprite Frames/trinagle.png" id="4_6whob"]
 [ext_resource type="PackedScene" uid="uid://p22sham85u4u" path="res://Scenes/MedKits.tscn" id="5_u7krg"]
 [ext_resource type="PackedScene" uid="uid://bnglv4xn425t0" path="res://Scenes/ammo_pack.tscn" id="6_tx0tn"]
+[ext_resource type="PackedScene" uid="uid://c24l7jjbv3iqt" path="res://Scenes/damage_area.tscn" id="6_wjtap"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hh5uf"]
 animations = [{
@@ -20,11 +20,6 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hh5uf"]
 size = Vector2(116, 120)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_tx0tn"]
-size = Vector2(118, 119)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6whob"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -76,42 +71,6 @@ offset_bottom = 73.0
 text = "Health: "
 horizontal_alignment = 1
 
-[node name="DamageAera" type="Area2D" parent="."]
-position = Vector2(-4, -3)
-scale = Vector2(0.586049, 0.567705)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageAera"]
-position = Vector2(198, 312)
-shape = SubResource("RectangleShape2D_tx0tn")
-
-[node name="Sprite2D" type="Sprite2D" parent="DamageAera"]
-position = Vector2(197, 314)
-texture = ExtResource("2_v1qfn")
-
-[node name="FireDamage" type="Timer" parent="."]
-process_callback = 0
-one_shot = true
-
-[node name="ShieldPack" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ShieldPack"]
-position = Vector2(622.179, 514.965)
-scale = Vector2(0.634715, 1.04048)
-shape = SubResource("RectangleShape2D_6whob")
-
-[node name="Sprite2D2" type="Sprite2D" parent="ShieldPack"]
-position = Vector2(622, 515)
-rotation = 1.57095
-scale = Vector2(0.0207017, 0.0380701)
-skew = 0.000253797
-texture = ExtResource("4_6whob")
-
-[node name="Sprite2D" type="Sprite2D" parent="ShieldPack"]
-position = Vector2(622.179, 514.964)
-rotation = 3.14159
-scale = Vector2(0.0138075, -0.0358711)
-texture = ExtResource("4_6whob")
-
 [node name="MedKit" parent="." instance=ExtResource("5_u7krg")]
 position = Vector2(217, 422)
 
@@ -126,7 +85,8 @@ scale = Vector2(0.575832, 0.572562)
 position = Vector2(1002, 518)
 scale = Vector2(0.575832, 0.572562)
 
-[connection signal="body_entered" from="DamageAera" to="Player" method="_on_damage_aera_body_entered"]
-[connection signal="body_exited" from="DamageAera" to="Player" method="_on_damage_aera_body_exited"]
-[connection signal="timeout" from="FireDamage" to="Player" method="_on_fire_damage_timeout"]
-[connection signal="body_entered" from="ShieldPack" to="Player" method="_on_shield_pack_body_entered"]
+[node name="DamageArea" parent="." instance=ExtResource("6_wjtap")]
+position = Vector2(307, 363)
+
+[node name="DamageArea2" parent="." instance=ExtResource("6_wjtap")]
+position = Vector2(875, 348)

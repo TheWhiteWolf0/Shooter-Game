@@ -25,7 +25,7 @@ var ammo_diff:int
 
 var ammo_pack:bool = true
 
-var fire_damage:float = 0.0
+#var fire_damage:float = 0.0
 
 var fireDamage: bool = false
 
@@ -56,42 +56,14 @@ func _physics_process(delta):
 	get_input()
 	move_and_slide()
 	player_weapon()
-	#Max_Player_Health = player_Health + player_Shield
 	
 	$"../CanvasLayer/reserve_ammo".text = "ReserveAmmo: " + str(GlobalVariables.reserve_ammo)
 	$"../CanvasLayer/mag_ammo".text = "MagAmmo: " + str(mag_ammo)
 	$"../CanvasLayer/player_Health".text = "Health: " + str(GlobalVariables.player_Health)
-	
 
-	
-	
 func fire():
 	var bullet_instance = bullet.instantiate()
 	bullet_instance.global_position = shooting_point.global_position
 	bullet_instance.rotation_degrees = rotation_degrees
 	#bullet_instance.apply_impulse(Vector2(), Vector2(bullet_speed, 0).rotated(rotation))
 	get_tree().get_root().call_deferred("add_child", bullet_instance)
-	
-
-func _on_damage_aera_body_entered(body: Node2D) -> void:
-	print("Entered")
-	fireDamage = true
-	if fireDamage == true:
-		$"../FireDamage".start()
-		fire_damage = fire_damage + 1
-		GlobalVariables.player_Health = GlobalVariables.player_Health - (5 * fire_damage)
-		
-	
-	pass # Replace with function body.
-func _on_fire_damage_timeout() -> void:
-	fire_damage += 0.2
-	pass # Replace with function body.
-
-@onready var terget = $"."
-var enemy_speed = 200
-
-#func _physics_process(delta: float) -> void:
-	#var direction = (terget.position - position).normalized()
-	#velocity = direction * enemy_speed
-	#look_at(terget.position)
-	#move_and_slide()
