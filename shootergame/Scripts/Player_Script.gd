@@ -16,7 +16,6 @@ func get_input():
 	velocity = input_direction * player_speed
 	look_at(get_global_mouse_position())
 	
-	
 func player_weapon():
 	if GlobalVariables.mag_ammo == 0:
 		GlobalVariables.Can_reload = true
