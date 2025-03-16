@@ -10,13 +10,15 @@
 extends CharacterBody2D
 
 @onready var shooting_point: Marker2D = $Polygon2D/ShootingPoint
-@export var player_speed = 250
 
 var bullet = preload("res://Scenes/Bullet.tscn")
 
+var player_position = position
+
+
 func get_input():
 	var input_direction = Input.get_vector("Left", "Right", "Up", "Down")
-	velocity = input_direction * player_speed
+	velocity = input_direction * GlobalVariables.player_speed
 	look_at(get_global_mouse_position())
 
 func player_weapon():
@@ -39,9 +41,9 @@ func _physics_process(delta):
 	move_and_slide()
 	player_weapon()
 	
-	$"../CanvasLayer/reserve_ammo".text = "ReserveAmmo: " + str(GlobalVariables.reserve_ammo)
-	$"../CanvasLayer/mag_ammo".text = "MagAmmo: " + str(GlobalVariables.mag_ammo)
-	$"../CanvasLayer/player_Health".text = "Health: " + str(GlobalVariables.player_Health)
+#	$"../CanvasLayer/reserve_ammo".text = "ReserveAmmo: " + str(GlobalVariables.reserve_ammo)
+#	$"../CanvasLayer/mag_ammo".text = "MagAmmo: " + str(GlobalVariables.mag_ammo)
+#	$"../CanvasLayer/player_Health".text = "Health: " + str(GlobalVariables.player_Health)
 
 func fire():
 	var bullet_instance = bullet.instantiate()

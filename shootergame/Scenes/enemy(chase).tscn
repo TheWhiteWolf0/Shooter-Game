@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://1culhx83bl5l"]
+
+[ext_resource type="Script" uid="uid://coo5demru8hfy" path="res://Scripts/Enemy(Chase).gd" id="1_d570n"]
+[ext_resource type="Texture2D" uid="uid://cararyfg0c133" path="res://Sprite Frames/icon.svg" id="2_5476s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s0lla"]
+size = Vector2(117, 118)
+
+[node name="Enemy(Chase)" type="CharacterBody2D"]
+script = ExtResource("1_d570n")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 1)
+shape = SubResource("RectangleShape2D_s0lla")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.917647, 0.027451, 0, 1)
+texture = ExtResource("2_5476s")
