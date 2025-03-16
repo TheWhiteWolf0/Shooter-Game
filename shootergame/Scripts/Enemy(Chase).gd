@@ -17,7 +17,18 @@ extends CharacterBody2D
 
 const SPEED = 75
 
+#func _ready() -> void:
+	#set_physics_process(false)
+	#call_deferred("_wait_for_physics()")
+
+#func _wait_for_physics():
+	#await get_tree().physics_frame
+	#set_physics_process(true)
+
 func _physics_process(delta: float) -> void:
+	#if navigation_agent_2d.is_navigation_finished() \
+	#and target_to_chase.global_position == navigation_agent_2d.target_position:
+	#	return
 	navigation_agent_2d.target_position = target_to_chase.global_position
 	velocity = global_position.direction_to(navigation_agent_2d.get_next_path_position()) * SPEED
 	move_and_slide()
