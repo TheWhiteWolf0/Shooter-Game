@@ -4,6 +4,9 @@
 
 
 
+
+
+
 extends CharacterBody2D
 
 @onready var shooting_point: Marker2D = $Polygon2D/ShootingPoint
@@ -15,7 +18,7 @@ func get_input():
 	var input_direction = Input.get_vector("Left", "Right", "Up", "Down")
 	velocity = input_direction * player_speed
 	look_at(get_global_mouse_position())
-	
+
 func player_weapon():
 	if GlobalVariables.mag_ammo == 0:
 		GlobalVariables.Can_reload = true
@@ -30,7 +33,6 @@ func player_weapon():
 		GlobalVariables.reserve_ammo = GlobalVariables.reserve_ammo - 5
 		
 	return
-
 
 func _physics_process(delta):
 	get_input()
