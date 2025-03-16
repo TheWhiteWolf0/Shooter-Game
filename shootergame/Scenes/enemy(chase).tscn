@@ -6,7 +6,8 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s0lla"]
 size = Vector2(117, 118)
 
-[node name="Enemy(Chase)" type="CharacterBody2D"]
+[node name="EnemyChase" type="CharacterBody2D"]
+scale = Vector2(0.50141, 0.50141)
 script = ExtResource("1_d570n")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]

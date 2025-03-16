@@ -20,7 +20,6 @@ const SPEED = 75
 #func _ready() -> void:
 	#set_physics_process(false)
 	#call_deferred("_wait_for_physics()")
-
 #func _wait_for_physics():
 	#await get_tree().physics_frame
 	#set_physics_process(true)
@@ -32,3 +31,9 @@ func _physics_process(delta: float) -> void:
 	navigation_agent_2d.target_position = target_to_chase.global_position
 	velocity = global_position.direction_to(navigation_agent_2d.get_next_path_position()) * SPEED
 	move_and_slide()
+
+func _on_body_entered(body: Node2D) -> void:
+	if body is CharacterBody2D:
+		print("Hit")
+		$".".queue_free()
+	pass # Replace with function body.
