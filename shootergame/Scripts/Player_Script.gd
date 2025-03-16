@@ -7,13 +7,13 @@
 extends CharacterBody2D
 
 @onready var shooting_point: Marker2D = $Polygon2D/ShootingPoint
-@export var speed = 250
-var bullet_speed = 7000
+@export var player_speed = 250
+
 var bullet = preload("res://Scenes/Bullet.tscn")
 
 func get_input():
 	var input_direction = Input.get_vector("Left", "Right", "Up", "Down")
-	velocity = input_direction * speed
+	velocity = input_direction * player_speed
 	look_at(get_global_mouse_position())
 	
 	

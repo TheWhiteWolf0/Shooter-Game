@@ -1,8 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://d2noon1vftiyp"]
+[gd_scene load_steps=8 format=3 uid="uid://d2noon1vftiyp"]
 
 [ext_resource type="Script" uid="uid://b6tjlvlwgmbme" path="res://Scripts/Player_Script.gd" id="1_wtcfe"]
 [ext_resource type="Texture2D" uid="uid://cararyfg0c133" path="res://Sprite Frames/icon.svg" id="2_v1qfn"]
-[ext_resource type="Script" path="res://Scripts/Gun(Prechance).gd" id="3_hh5uf"]
 [ext_resource type="PackedScene" uid="uid://p22sham85u4u" path="res://Scenes/MedKits.tscn" id="5_u7krg"]
 [ext_resource type="PackedScene" uid="uid://bnglv4xn425t0" path="res://Scenes/ammo_pack.tscn" id="6_tx0tn"]
 [ext_resource type="PackedScene" uid="uid://c24l7jjbv3iqt" path="res://Scenes/damage_area.tscn" id="6_wjtap"]
@@ -42,7 +41,6 @@ rotation = 1.55353
 scale = Vector2(18.9265, 22.972)
 offset = Vector2(-3.01165, 1.76713)
 polygon = PackedVector2Array(3, 1, 6, 1, 3, -6, 0, 1)
-script = ExtResource("3_hh5uf")
 
 [node name="ShootingPoint" type="Marker2D" parent="Player/Polygon2D"]
 position = Vector2(-0.0171871, -4.2234)
@@ -72,21 +70,21 @@ text = "Health: "
 horizontal_alignment = 1
 
 [node name="MedKit" parent="." instance=ExtResource("5_u7krg")]
-position = Vector2(217, 422)
+position = Vector2(422, 551)
 
 [node name="MedKit2" parent="." instance=ExtResource("5_u7krg")]
-position = Vector2(286, 508)
+position = Vector2(490, 548)
 
 [node name="AmmoPack" parent="." instance=ExtResource("6_tx0tn")]
-position = Vector2(794, 513)
+position = Vector2(272, 553)
 scale = Vector2(0.575832, 0.572562)
 
 [node name="AmmoPack2" parent="." instance=ExtResource("6_tx0tn")]
-position = Vector2(1002, 518)
+position = Vector2(355, 554)
 scale = Vector2(0.575832, 0.572562)
 
 [node name="DamageArea" parent="." instance=ExtResource("6_wjtap")]
-position = Vector2(307, 363)
+position = Vector2(99, 559)
 
 [node name="DamageArea2" parent="." instance=ExtResource("6_wjtap")]
-position = Vector2(875, 348)
+position = Vector2(181, 558)
