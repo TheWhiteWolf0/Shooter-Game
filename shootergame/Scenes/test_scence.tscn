@@ -50,9 +50,13 @@ position = Vector2(592, 240)
 scale = Vector2(0.48, 0.48)
 
 [node name="EnemyChase" parent="." node_paths=PackedStringArray("target_to_chase") instance=ExtResource("3_ud2or")]
-position = Vector2(117, 493)
+position = Vector2(73, 532)
 target_to_chase = NodePath("../Player")
 
 [node name="EnemyChase2" parent="." node_paths=PackedStringArray("target_to_chase") instance=ExtResource("3_ud2or")]
-position = Vector2(241, 533)
+position = Vector2(229, 524)
+target_to_chase = NodePath("../Player")
+
+[node name="EnemyChase3" parent="." node_paths=PackedStringArray("target_to_chase") instance=ExtResource("3_ud2or")]
+position = Vector2(414, 512)
 target_to_chase = NodePath("../Player")
