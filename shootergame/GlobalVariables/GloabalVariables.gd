@@ -22,3 +22,5 @@ var reserve_ammo:int = 40
 
 var damage_Overtime:bool = false
 var damage_OT_Fire:float = 0.0
+
+var Currency:int = 0

@@ -1,8 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://6w6x2n5vsuo0"]
+[gd_scene load_steps=9 format=3 uid="uid://6w6x2n5vsuo0"]
 
 [ext_resource type="Texture2D" uid="uid://cararyfg0c133" path="res://Sprite Frames/icon.svg" id="1_qmtu8"]
 [ext_resource type="PackedScene" uid="uid://d2noon1vftiyp" path="res://Scenes/Player.tscn" id="2_el23o"]
 [ext_resource type="PackedScene" uid="uid://1culhx83bl5l" path="res://Scenes/enemy(chase).tscn" id="3_ud2or"]
+[ext_resource type="PackedScene" uid="uid://bjw3uvhgoe0aa" path="res://Scenes/hud.tscn" id="4_ud2or"]
+[ext_resource type="PackedScene" uid="uid://p22sham85u4u" path="res://Scenes/MedKits.tscn" id="5_iph1d"]
+[ext_resource type="PackedScene" uid="uid://bnglv4xn425t0" path="res://Scenes/ammo_pack.tscn" id="6_2n37a"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_83j0u"]
 vertices = PackedVector2Array(1142.95, 636.023, 9.03125, 638.969, 9.75781, 404.203, 435.32, 404.203, 755.227, 253.203, 1141.18, 253.203, 435.32, 323.359, 1140.04, 10.0313, 1140.79, 172.359, 755.227, 172.359, 10.9609, 13.9609, 10.0078, 323.359)
@@ -49,14 +52,75 @@ texture = ExtResource("1_qmtu8")
 position = Vector2(592, 240)
 scale = Vector2(0.48, 0.48)
 
-[node name="EnemyChase" parent="." node_paths=PackedStringArray("target_to_chase") instance=ExtResource("3_ud2or")]
-position = Vector2(73, 532)
-target_to_chase = NodePath("../Player")
+[node name="HUD" parent="Player" instance=ExtResource("4_ud2or")]
+position = Vector2(-495.833, -79.1667)
+scale = Vector2(2.08333, 2.08333)
 
-[node name="EnemyChase2" parent="." node_paths=PackedStringArray("target_to_chase") instance=ExtResource("3_ud2or")]
-position = Vector2(229, 524)
-target_to_chase = NodePath("../Player")
+[node name="Enemy(Chase)" type="Node2D" parent="."]
+position = Vector2(1054, 355)
+scale = Vector2(0.50141, 0.50141)
 
-[node name="EnemyChase3" parent="." node_paths=PackedStringArray("target_to_chase") instance=ExtResource("3_ud2or")]
-position = Vector2(414, 512)
-target_to_chase = NodePath("../Player")
+[node name="EnemyChase" parent="Enemy(Chase)" node_paths=PackedStringArray("target_to_chase") instance=ExtResource("3_ud2or")]
+position = Vector2(-1956.48, 353.005)
+scale = Vector2(1, 1)
+target_to_chase = NodePath("../../Player")
+
+[node name="EnemyChase2" parent="Enemy(Chase)" node_paths=PackedStringArray("target_to_chase") instance=ExtResource("3_ud2or")]
+position = Vector2(-1645.36, 337.049)
+scale = Vector2(1, 1)
+target_to_chase = NodePath("../../Player")
+
+[node name="EnemyChase3" parent="Enemy(Chase)" node_paths=PackedStringArray("target_to_chase") instance=ExtResource("3_ud2or")]
+position = Vector2(-1276.4, 313.117)
+scale = Vector2(1, 1)
+target_to_chase = NodePath("../../Player")
+
+[node name="EnemyChase4" parent="Enemy(Chase)" node_paths=PackedStringArray("target_to_chase") instance=ExtResource("3_ud2or")]
+position = Vector2(-1771.01, 195.449)
+scale = Vector2(1, 1)
+target_to_chase = NodePath("../../Player")
+
+[node name="EnemyChase5" parent="Enemy(Chase)" node_paths=PackedStringArray("target_to_chase") instance=ExtResource("3_ud2or")]
+position = Vector2(-1471.85, 187.471)
+scale = Vector2(1, 1)
+target_to_chase = NodePath("../../Player")
+
+[node name="EnemyChase6" parent="Enemy(Chase)" node_paths=PackedStringArray("target_to_chase") instance=ExtResource("3_ud2or")]
+position = Vector2(-1818.87, 466.684)
+scale = Vector2(1, 1)
+target_to_chase = NodePath("../../Player")
+
+[node name="EnemyChase7" parent="Enemy(Chase)" node_paths=PackedStringArray("target_to_chase") instance=ExtResource("3_ud2or")]
+position = Vector2(-95.7301, 384.914)
+scale = Vector2(1, 1)
+target_to_chase = NodePath("../../Player")
+
+[node name="EnemyChase8" parent="Enemy(Chase)" node_paths=PackedStringArray("target_to_chase") instance=ExtResource("3_ud2or")]
+position = Vector2(47.865, 197.443)
+scale = Vector2(1, 1)
+target_to_chase = NodePath("../../Player")
+
+[node name="EnemyChase9" parent="Enemy(Chase)" node_paths=PackedStringArray("target_to_chase") instance=ExtResource("3_ud2or")]
+position = Vector2(-205.421, 191.46)
+scale = Vector2(1, 1)
+target_to_chase = NodePath("../../Player")
+
+[node name="EnemyChase10" parent="Enemy(Chase)" node_paths=PackedStringArray("target_to_chase") instance=ExtResource("3_ud2or")]
+scale = Vector2(1, 1)
+target_to_chase = NodePath("../../Player")
+
+[node name="HealthPacks" type="Node2D" parent="."]
+
+[node name="MedKit" parent="HealthPacks" instance=ExtResource("5_iph1d")]
+position = Vector2(1088, 572)
+
+[node name="MedKit2" parent="HealthPacks" instance=ExtResource("5_iph1d")]
+position = Vector2(54, 599)
+
+[node name="AmmoPacks" type="Node2D" parent="."]
+
+[node name="AmmoPack" parent="AmmoPacks" instance=ExtResource("6_2n37a")]
+position = Vector2(1051, 86)
+
+[node name="AmmoPack2" parent="AmmoPacks" instance=ExtResource("6_2n37a")]
+position = Vector2(71, 255)

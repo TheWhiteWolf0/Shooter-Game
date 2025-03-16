@@ -32,10 +32,6 @@ func _physics_process(delta: float) -> void:
 	velocity = global_position.direction_to(navigation_agent_2d.get_next_path_position()) * SPEED
 	move_and_slide()
 
-
-
-
-
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	print("Hmmm")
 	queue_free()
