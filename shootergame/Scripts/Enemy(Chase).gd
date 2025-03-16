@@ -34,5 +34,6 @@ func _physics_process(delta: float) -> void:
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	print("Hmmm")
+	GlobalVariables.Currency = GlobalVariables.Currency + 1
 	queue_free()
 	pass # Replace with function body.

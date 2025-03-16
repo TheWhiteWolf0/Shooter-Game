@@ -28,3 +28,11 @@ offset_right = 65.0
 offset_bottom = 73.0
 text = "Health: "
 horizontal_alignment = 1
+
+[node name="BloodEchoes" type="Label" parent="CanvasLayer"]
+offset_left = 4.0
+offset_top = 72.0
+offset_right = 111.0
+offset_bottom = 96.0
+text = "BloodEchoes: "
+horizontal_alignment = 1
