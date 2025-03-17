@@ -15,7 +15,11 @@ var player_Health:int = 100
 
 var Can_Fire:bool = true
 var Can_reload:bool = false
+
+#These need to equal Each other#
 var mag_ammo:int = 5
+var mag_Capacity:int = 5
+#~~#
 
 var reserve_ammo:int = 40
 

@@ -31,8 +31,8 @@ func player_weapon():
 
 		
 	if Input.is_action_just_pressed("Reload") and GlobalVariables.Can_reload and GlobalVariables.reserve_ammo > 0 and GlobalVariables.mag_ammo == 0:
-		GlobalVariables.mag_ammo = GlobalVariables.mag_ammo + 5
-		GlobalVariables.reserve_ammo = GlobalVariables.reserve_ammo - 5
+		GlobalVariables.mag_ammo = GlobalVariables.mag_ammo + GlobalVariables.mag_Capacity
+		GlobalVariables.reserve_ammo = GlobalVariables.reserve_ammo - GlobalVariables.mag_Capacity
 		
 	return
 
