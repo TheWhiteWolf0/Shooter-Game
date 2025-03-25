@@ -40,10 +40,16 @@ func _physics_process(delta):
 	get_input()
 	move_and_slide()
 	player_weapon()
+	upgrade()
 
 func fire():
+	
 	var bullet_instance = bullet.instantiate()
 	bullet_instance.global_position = shooting_point.global_position
 	bullet_instance.rotation_degrees = rotation_degrees
 	#bullet_instance.apply_impulse(Vector2(), Vector2(bullet_speed, 0).rotated(rotation))
 	get_tree().get_root().call_deferred("add_child", bullet_instance)
+
+func upgrade():
+	if Input.is_action_just_pressed("Inventory"):
+		get_tree().change_scene_to_file("res://Scenes/control.tscn")

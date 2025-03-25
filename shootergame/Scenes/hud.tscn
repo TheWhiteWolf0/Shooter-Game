@@ -13,6 +13,7 @@ offset_top = 25.0
 offset_right = 98.0
 offset_bottom = 48.0
 text = "MagAmmo: "
+metadata/_edit_use_anchors_ = true
 
 [node name="reserve_ammo" type="Label" parent="CanvasLayer"]
 offset_left = 4.0
@@ -20,6 +21,7 @@ offset_top = 3.0
 offset_right = 125.0
 offset_bottom = 26.0
 text = "ReserveAmmo: "
+metadata/_edit_use_anchors_ = true
 
 [node name="player_Health" type="Label" parent="CanvasLayer"]
 offset_left = 5.0
@@ -28,6 +30,7 @@ offset_right = 65.0
 offset_bottom = 73.0
 text = "Health: "
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="BloodEchoes" type="Label" parent="CanvasLayer"]
 offset_left = 4.0
@@ -36,3 +39,12 @@ offset_right = 111.0
 offset_bottom = 96.0
 text = "BloodEchoes: "
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Score" type="Label" parent="CanvasLayer"]
+offset_left = 4.0
+offset_top = 92.0
+offset_right = 56.0
+offset_bottom = 115.0
+text = "Score: "
+metadata/_edit_use_anchors_ = true

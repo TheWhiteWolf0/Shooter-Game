@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://cwfkd43n5erxt"]
+
+[ext_resource type="Script" uid="uid://bchsehxah1bvh" path="res://Scripts/enemy(multi_hit).gd" id="1_ntxh7"]
+[ext_resource type="Texture2D" uid="uid://cararyfg0c133" path="res://Sprite Frames/icon.svg" id="2_lj3yn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_73rc5"]
+radius = 44.1022
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_n4kmr"]
+radius = 98.1275
+
+[node name="Enemy(Multi-hit)" type="CharacterBody2D"]
+script = ExtResource("1_ntxh7")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_73rc5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.714799, 0.00120596, 0.832953, 1)
+scale = Vector2(1, 1.00483)
+texture = ExtResource("2_lj3yn")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_n4kmr")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

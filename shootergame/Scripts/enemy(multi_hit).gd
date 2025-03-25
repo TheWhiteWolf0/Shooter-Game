@@ -6,16 +6,13 @@
 
 
 
-
-
 extends CharacterBody2D
-
-
 
 @onready var navigation_agent_2d: NavigationAgent2D = $NavigationAgent2D
 @export var target_to_chase: CharacterBody2D
 
-const SPEED = 75
+const SPEED = 50
+var enemy_health:int = 15
 
 #func _ready() -> void:
 	#set_physics_process(false)
@@ -34,7 +31,9 @@ func _physics_process(delta: float) -> void:
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	print("Hmmm")
-	GlobalVariables.Currency = GlobalVariables.Currency + 1
-	GlobalVariables.player_Score = GlobalVariables.player_Score + 1
-	queue_free()
+	enemy_health = enemy_health - GlobalVariables.player_Damage
+	if enemy_health <= 0:
+		GlobalVariables.Currency = GlobalVariables.Currency + 1
+		GlobalVariables.player_Score = GlobalVariables.player_Score + 1
+		queue_free()
 	pass # Replace with function body.

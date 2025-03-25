@@ -3,11 +3,11 @@
 [ext_resource type="Script" uid="uid://coo5demru8hfy" path="res://Scripts/Enemy(Chase).gd" id="1_d570n"]
 [ext_resource type="Texture2D" uid="uid://cararyfg0c133" path="res://Sprite Frames/icon.svg" id="2_5476s"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_s0lla"]
-size = Vector2(139.606, 137.612)
+[sub_resource type="CircleShape2D" id="CircleShape2D_5476s"]
+radius = 69.9811
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_d570n"]
-size = Vector2(119.663, 119.663)
+[sub_resource type="CircleShape2D" id="CircleShape2D_d570n"]
+radius = 66.5657
 
 [node name="EnemyChase" type="CharacterBody2D"]
 scale = Vector2(0.50141, 0.50141)
@@ -18,7 +18,7 @@ script = ExtResource("1_d570n")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(5.70595e-06, 0.997189)
 scale = Vector2(0.999999, 0.999999)
-shape = SubResource("RectangleShape2D_s0lla")
+shape = SubResource("CircleShape2D_5476s")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0.917647, 0.027451, 0, 1)
@@ -29,6 +29,6 @@ texture = ExtResource("2_5476s")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-4.39834e-06, 3.4795e-06)
 scale = Vector2(0.999998, 0.999998)
-shape = SubResource("RectangleShape2D_d570n")
+shape = SubResource("CircleShape2D_d570n")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
