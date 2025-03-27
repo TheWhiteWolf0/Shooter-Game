@@ -13,6 +13,7 @@ var player_Score:int = 0
 @export var player_speed = 250
 var player_Health:int = 100
 var player_Damage:int = 5
+var player_lvl:int = 0
 
 
 var Can_Fire:bool = true
