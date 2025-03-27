@@ -40,6 +40,8 @@ func _on_player_damage_pressed() -> void:
 		cost = cost + 2
 		print(cost)
 		print(GlobalVariables.player_Damage)
+	else:
+		print("Insufficient funds")
 	
 	
 	
