@@ -19,11 +19,38 @@ func _on_button_pressed() -> void:
 		GlobalVariables.mag_Capacity = GlobalVariables.mag_Capacity + 1
 		cost = cost + 2
 		print(cost)
-		print(GlobalVariables.mag_ammo)
-		print(GlobalVariables.mag_Capacity)
 	else:
-		print("Insufficieny funds")
+		print("Insufficient funds")
 	pass # Replace with function body.
+
+func _on_player_health_pressed() -> void:
+	if GlobalVariables.Currency >= cost:
+		GlobalVariables.Currency = GlobalVariables.Currency - cost
+		GlobalVariables.player_Health = GlobalVariables.player_Health + 10
+		cost = cost + 2
+		print(cost)
+	else:
+		print("Insufficient funds")
+	pass # Replace with function body.
+
+func _on_player_damage_pressed() -> void:
+	if GlobalVariables.Currency >= cost:
+		GlobalVariables.Currency = GlobalVariables.Currency - cost
+		GlobalVariables.player_Damage = GlobalVariables.player_Damage * 1.5
+		cost = cost + 2
+		print(cost)
+		print(GlobalVariables.player_Damage)
+	
+	
+	
+	
+	
+	pass # Replace with function body.
+
+
+
+
+
 
 func _on_back_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/test_scence.tscn")
