@@ -76,4 +76,4 @@ func _physics_process(delta: float) -> void:
 	$"CanvasLayer/Health/PlayerHealth + Increase".text = "--> " + str(GlobalVariables.player_Health + 10)
 	
 	$CanvasLayer/MagSize.text = "MagCapicity: " + str(GlobalVariables.mag_Capacity)
-	
+	$"CanvasLayer/MagSize/MagSize + increase".text = "--> " + str(GlobalVariables.mag_Capacity + 1)

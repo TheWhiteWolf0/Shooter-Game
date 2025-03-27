@@ -92,6 +92,7 @@ offset_bottom = 164.0
 text = "Damage: "
 
 [node name="Damage + increase" type="Label" parent="CanvasLayer/Damage"]
+layout_mode = 0
 offset_left = 94.0
 offset_top = -1.0
 offset_right = 134.0
@@ -105,6 +106,7 @@ offset_bottom = 124.0
 text = "Health: "
 
 [node name="PlayerHealth + Increase" type="Label" parent="CanvasLayer/Health"]
+layout_mode = 0
 offset_left = 90.0
 offset_top = 2.0
 offset_right = 130.0
@@ -116,6 +118,13 @@ offset_top = 67.0
 offset_right = 294.0
 offset_bottom = 90.0
 text = "MagCapacity: "
+
+[node name="MagSize + increase" type="Label" parent="CanvasLayer/MagSize"]
+layout_mode = 0
+offset_left = 116.0
+offset_top = 1.0
+offset_right = 156.0
+offset_bottom = 24.0
 
 [connection signal="pressed" from="MagIncrease" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="PlayerHealth" to="." method="_on_player_health_pressed"]

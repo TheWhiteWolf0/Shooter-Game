@@ -10,10 +10,12 @@
 extends CharacterBody2D
 
 @onready var shooting_point: Marker2D = $Polygon2D/ShootingPoint
+#@onready var player: CharacterBody2D
 
 var bullet = preload("res://Scenes/Bullet.tscn")
 
-var player_position = position
+
+#var player_position = position
 
 
 func get_input():
@@ -43,7 +45,6 @@ func _physics_process(delta):
 	upgrade()
 
 func fire():
-	
 	var bullet_instance = bullet.instantiate()
 	bullet_instance.global_position = shooting_point.global_position
 	bullet_instance.rotation_degrees = rotation_degrees
