@@ -38,7 +38,7 @@ func _on_player_health_pressed() -> void:
 func _on_player_damage_pressed() -> void:
 	if GlobalVariables.Currency >= cost:
 		GlobalVariables.Currency = GlobalVariables.Currency - cost
-		GlobalVariables.player_Damage = GlobalVariables.player_Damage * 1.5
+		GlobalVariables.player_Damage = GlobalVariables.player_Damage + 1
 		cost = cost + 2
 		GlobalVariables.player_lvl = GlobalVariables.player_lvl + 1
 		print(cost)
@@ -70,6 +70,10 @@ func _physics_process(delta: float) -> void:
 	$CanvasLayer/Cost.text = "Cost: " + str(cost)
 	$CanvasLayer/PlayerLevel.text = "Level: " + str(GlobalVariables.player_lvl)
 	$CanvasLayer/Damage.text = "Damage: " + str(GlobalVariables.player_Damage)
-	$CanvasLayer/Health.text = "Health: " + str(GlobalVariables.player_Health)	
+	$"CanvasLayer/Damage/Damage + increase".text = "--> " + str(GlobalVariables.player_Damage + 1)
+	
+	$CanvasLayer/Health.text = "Health: " + str(GlobalVariables.player_Health)
+	$"CanvasLayer/Health/PlayerHealth + Increase".text = "--> " + str(GlobalVariables.player_Health + 10)
+	
 	$CanvasLayer/MagSize.text = "MagCapicity: " + str(GlobalVariables.mag_Capacity)
 	

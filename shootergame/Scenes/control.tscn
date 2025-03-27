@@ -91,12 +91,24 @@ offset_right = 270.0
 offset_bottom = 164.0
 text = "Damage: "
 
+[node name="Damage + increase" type="Label" parent="CanvasLayer/Damage"]
+offset_left = 94.0
+offset_top = -1.0
+offset_right = 134.0
+offset_bottom = 22.0
+
 [node name="Health" type="Label" parent="CanvasLayer"]
 offset_left = 199.0
 offset_top = 101.0
 offset_right = 259.0
 offset_bottom = 124.0
 text = "Health: "
+
+[node name="PlayerHealth + Increase" type="Label" parent="CanvasLayer/Health"]
+offset_left = 90.0
+offset_top = 2.0
+offset_right = 130.0
+offset_bottom = 25.0
 
 [node name="MagSize" type="Label" parent="CanvasLayer"]
 offset_left = 195.0
