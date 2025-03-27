@@ -42,26 +42,24 @@ func _on_player_damage_pressed() -> void:
 		print(GlobalVariables.player_Damage)
 	else:
 		print("Insufficient funds")
-	
-	
-	
-	
-	
 	pass # Replace with function body.
 
 
-
-
+func _on_reserve_ammo_pressed() -> void:
+	if GlobalVariables.Currency >= cost:
+		GlobalVariables.Currency = GlobalVariables.Currency - cost
+		GlobalVariables.reserve_ammo = GlobalVariables.reserve_ammo + 10
+		cost = cost + 2 
+	else:
+		print("Insufficient funds")
+	
+	pass # Replace with function body.
 
 
 func _on_back_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/test_scence.tscn")
 	pass # Replace with function body.
-	
-	
-	
-	
-	
+
 func _physics_process(delta: float) -> void:
 	$CanvasLayer/BloodEchoes.text = "BloodEchoes: " + str(GlobalVariables.Currency)
 	$CanvasLayer/Score.text = "Score: " + str(GlobalVariables.player_Score)
