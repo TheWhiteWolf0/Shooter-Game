@@ -1,10 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://6w6x2n5vsuo0"]
+[gd_scene load_steps=11 format=3 uid="uid://6w6x2n5vsuo0"]
 
 [ext_resource type="Texture2D" uid="uid://cararyfg0c133" path="res://Sprite Frames/icon.svg" id="1_qmtu8"]
 [ext_resource type="PackedScene" uid="uid://d2noon1vftiyp" path="res://Scenes/Player.tscn" id="2_el23o"]
 [ext_resource type="PackedScene" uid="uid://1culhx83bl5l" path="res://Scenes/enemy(chase).tscn" id="3_ud2or"]
 [ext_resource type="PackedScene" uid="uid://bjw3uvhgoe0aa" path="res://Scenes/hud.tscn" id="4_ud2or"]
+[ext_resource type="PackedScene" uid="uid://cwfkd43n5erxt" path="res://Scenes/enemy(multi_hit).tscn" id="5_2n37a"]
 [ext_resource type="PackedScene" uid="uid://p22sham85u4u" path="res://Scenes/MedKits.tscn" id="5_iph1d"]
+[ext_resource type="PackedScene" uid="uid://c24l7jjbv3iqt" path="res://Scenes/damage_area.tscn" id="6_2dkxq"]
 [ext_resource type="PackedScene" uid="uid://bnglv4xn425t0" path="res://Scenes/ammo_pack.tscn" id="6_2n37a"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_83j0u"]
@@ -64,6 +66,17 @@ scale = Vector2(0.50141, 0.50141)
 position = Vector2(-927.385, 283.201)
 scale = Vector2(1, 1)
 target_to_chase = NodePath("../../Player")
+
+[node name="Enemy(Multi-hit)" parent="AllMobs" node_paths=PackedStringArray("target_to_chase") instance=ExtResource("5_2n37a")]
+position = Vector2(-1370.14, 349.016)
+target_to_chase = NodePath("../../Player")
+
+[node name="Enemy(Multi-hit)2" parent="AllMobs" node_paths=PackedStringArray("target_to_chase") instance=ExtResource("5_2n37a")]
+position = Vector2(-426.796, 221.376)
+target_to_chase = NodePath("../../Player")
+
+[node name="DamageArea2" parent="AllMobs" instance=ExtResource("6_2dkxq")]
+position = Vector2(-1631.4, -376.937)
 
 [node name="HealthPacks" type="Node2D" parent="."]
 
