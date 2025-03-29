@@ -92,4 +92,5 @@ process_callback = 0
 autostart = true
 
 [connection signal="body_entered" from="Fire" to="Fire" method="_on_body_entered"]
+[connection signal="body_exited" from="Fire" to="Fire" method="_on_body_exited"]
 [connection signal="timeout" from="Timer" to="Fire" method="_on_timer_timeout"]

@@ -32,3 +32,9 @@ func _on_timer_timeout() -> void:
 		GlobalVariables.player_Health = GlobalVariables.player_Health - (5 * GlobalVariables.damage_OT_Fire)
 		
 	pass # Replace with function body.
+
+
+func _on_body_exited(body: Node2D) -> void:
+	print("Exited")
+	GlobalVariables.damage_Overtime = false
+	pass # Replace with function body.

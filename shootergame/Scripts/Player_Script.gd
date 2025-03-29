@@ -43,6 +43,7 @@ func _physics_process(delta):
 	move_and_slide()
 	player_weapon()
 	upgrade()
+	death()
 	
 func fire():
 	var bullet_instance = bullet.instantiate()
