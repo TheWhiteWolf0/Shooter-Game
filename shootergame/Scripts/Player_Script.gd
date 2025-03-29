@@ -43,7 +43,7 @@ func _physics_process(delta):
 	move_and_slide()
 	player_weapon()
 	upgrade()
-
+	
 func fire():
 	var bullet_instance = bullet.instantiate()
 	bullet_instance.global_position = shooting_point.global_position
@@ -54,3 +54,11 @@ func fire():
 func upgrade():
 	if Input.is_action_just_pressed("Inventory"):
 		get_tree().change_scene_to_file("res://Scenes/control.tscn")
+
+func death():
+	if GlobalVariables.player_Health <= 0:
+		print("YOU DIED") 
+		# for now it will send the player to the upgrade scene#
+		get_tree().change_scene_to_file("res://Scenes/control.tscn")
+		# Need to create a main menu/level select # 
+		
