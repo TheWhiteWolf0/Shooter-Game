@@ -62,4 +62,11 @@ func death():
 		# for now it will send the player to the upgrade scene#
 		get_tree().change_scene_to_file("res://Scenes/control.tscn")
 		# Need to create a main menu/level select # 
+
+func _on_hit_box_area_entered(area: Area2D) -> void:
+	print("Player Hit")
+	GlobalVariables.player_Health = GlobalVariables.player_Health - 20
+	if GlobalVariables.player_Health <= 0:
+		death()
 		
+	pass # Replace with function body.
