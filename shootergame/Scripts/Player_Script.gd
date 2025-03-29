@@ -11,6 +11,7 @@ extends CharacterBody2D
 
 @onready var shooting_point: Marker2D = $Polygon2D/ShootingPoint
 #@onready var player: CharacterBody2D
+var reload_delay = false
 
 var bullet = preload("res://Scenes/Bullet.tscn")
 
@@ -33,9 +34,10 @@ func player_weapon():
 
 		
 	if Input.is_action_just_pressed("Reload") and GlobalVariables.Can_reload and GlobalVariables.reserve_ammo > 0 and GlobalVariables.mag_ammo == 0:
-		GlobalVariables.mag_ammo = GlobalVariables.mag_ammo + GlobalVariables.mag_Capacity
-		GlobalVariables.reserve_ammo = GlobalVariables.reserve_ammo - GlobalVariables.mag_Capacity
-		
+		$ReloadDelay.start()
+		reload_delay == true
+		if reload_delay == true:
+			_on_timer_timeout()
 	return
 
 func _physics_process(delta):
@@ -69,4 +71,10 @@ func _on_hit_box_area_entered(area: Area2D) -> void:
 	if GlobalVariables.player_Health <= 0:
 		death()
 		
+	pass # Replace with function body.
+	
+
+func _on_timer_timeout() -> void:
+	GlobalVariables.mag_ammo = GlobalVariables.mag_ammo + GlobalVariables.mag_Capacity
+	GlobalVariables.reserve_ammo = GlobalVariables.reserve_ammo - GlobalVariables.mag_Capacity
 	pass # Replace with function body.

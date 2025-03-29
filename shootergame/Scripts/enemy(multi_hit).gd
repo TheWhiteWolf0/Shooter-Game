@@ -28,12 +28,15 @@ func _physics_process(delta: float) -> void:
 	navigation_agent_2d.target_position = target_to_chase.global_position
 	velocity = global_position.direction_to(navigation_agent_2d.get_next_path_position()) * SPEED
 	move_and_slide()
+	enemydeath()
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
-	print("Hmmm")
+	print("enemy hit")
 	enemy_health = enemy_health - GlobalVariables.player_Damage
+	pass # Replace with function body.
+	
+func enemydeath():
 	if enemy_health <= 0:
 		GlobalVariables.Currency = GlobalVariables.Currency + 1
 		GlobalVariables.player_Score = GlobalVariables.player_Score + 1
 		queue_free()
-	pass # Replace with function body.
