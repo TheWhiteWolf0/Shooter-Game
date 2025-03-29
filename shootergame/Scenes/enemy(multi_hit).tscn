@@ -4,10 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://cararyfg0c133" path="res://Sprite Frames/icon.svg" id="2_lj3yn"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ntxh7"]
-radius = 10.9552
+radius = 11.5226
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_n4kmr"]
-radius = 40.6814
+radius = 42.0086
 
 [node name="Enemy(Multi-hit)" type="CharacterBody2D"]
 script = ExtResource("1_ntxh7")
@@ -15,7 +15,9 @@ script = ExtResource("1_ntxh7")
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-scale = Vector2(-6.11854, -6.11854)
+position = Vector2(1.5, 0.499996)
+rotation = -3.14159
+scale = Vector2(6.11854, 6.11854)
 shape = SubResource("CircleShape2D_ntxh7")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

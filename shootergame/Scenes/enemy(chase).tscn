@@ -7,7 +7,7 @@
 radius = 69.9811
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_d570n"]
-radius = 66.5657
+radius = 64.3168
 
 [node name="EnemyChase" type="CharacterBody2D"]
 scale = Vector2(0.50141, 0.50141)
