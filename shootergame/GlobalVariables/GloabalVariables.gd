@@ -15,6 +15,7 @@ var player_Health:int = 100
 var player_Damage:int = 5
 var player_lvl:int = 0
 
+var player_pos
 
 var Can_Fire:bool = true
 var Can_reload:bool = false

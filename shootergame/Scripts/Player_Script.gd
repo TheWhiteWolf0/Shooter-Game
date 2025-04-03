@@ -13,11 +13,14 @@ extends CharacterBody2D
 #@onready var player: CharacterBody2D
 var reload_delay = false
 
+var player_position = global_position
+
+
+func _ready() -> void:
+	GlobalVariables.player_pos = player_position
+	print(player_position)
+
 var bullet = preload("res://Scenes/Bullet.tscn")
-
-
-#var player_position = position
-
 
 func get_input():
 	var input_direction = Input.get_vector("Left", "Right", "Up", "Down")
@@ -46,7 +49,7 @@ func _physics_process(delta):
 	player_weapon()
 	upgrade()
 	death()
-	
+
 func fire():
 	var bullet_instance = bullet.instantiate()
 	bullet_instance.global_position = shooting_point.global_position
