@@ -1,7 +1,43 @@
-[gd_scene load_steps=5 format=3 uid="uid://cwfkd43n5erxt"]
+[gd_scene load_steps=10 format=3 uid="uid://cwfkd43n5erxt"]
 
 [ext_resource type="Script" uid="uid://bchsehxah1bvh" path="res://Scripts/enemy(multi_hit).gd" id="1_ntxh7"]
-[ext_resource type="Texture2D" uid="uid://cararyfg0c133" path="res://Sprite Frames/icon.svg" id="2_lj3yn"]
+[ext_resource type="Texture2D" uid="uid://d3ue64ipi726e" path="res://Sprite Frames/New Piskel (3).png" id="2_ntxh7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lj3yn"]
+atlas = ExtResource("2_ntxh7")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nymlj"]
+atlas = ExtResource("2_ntxh7")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s0o0q"]
+atlas = ExtResource("2_ntxh7")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ld7mo"]
+atlas = ExtResource("2_ntxh7")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1o5sa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lj3yn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nymlj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s0o0q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ld7mo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ntxh7"]
 radius = 11.5226
@@ -14,16 +50,16 @@ script = ExtResource("1_ntxh7")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1.19209e-07, 0)
+scale = Vector2(8.76, 8.76)
+sprite_frames = SubResource("SpriteFrames_1o5sa")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1.5, 0.499996)
 rotation = -3.14159
 scale = Vector2(6.11854, 6.11854)
 shape = SubResource("CircleShape2D_ntxh7")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(0.714799, 0.00120596, 0.832953, 1)
-scale = Vector2(1, 1.00483)
-texture = ExtResource("2_lj3yn")
 
 [node name="Area2D" type="Area2D" parent="."]
 

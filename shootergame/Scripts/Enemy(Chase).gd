@@ -15,8 +15,6 @@ extends CharacterBody2D
 @onready var navigation_agent_2d: NavigationAgent2D = $NavigationAgent2D
 @export var target_to_chase: CharacterBody2D
 
-
-
 const SPEED = 75
 
 #func _ready() -> void:

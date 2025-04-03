@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bolmq2h8nm0p5"]
+[gd_scene load_steps=12 format=3 uid="uid://dorkk81nkcr4a"]
 
 [ext_resource type="Script" uid="uid://bdyiqbwv55ms2" path="res://Scripts/bullet.gd" id="1_14k46"]
 [ext_resource type="Texture2D" uid="uid://ca8h14kmtuoj5" path="res://Sprite Frames/New Piskel.png" id="2_14k46"]
