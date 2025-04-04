@@ -60,7 +60,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Shot",
-"speed": 5.0
+"speed": 16.0
 }]
 
 [node name="Bullet__" type="Area2D"]

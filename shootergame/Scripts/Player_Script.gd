@@ -13,13 +13,6 @@ extends CharacterBody2D
 #@onready var player: CharacterBody2D
 var reload_delay = false
 
-var player_position = global_position
-
-
-func _ready() -> void:
-	GlobalVariables.player_pos = player_position
-	print(player_position)
-
 var bullet = preload("res://Scenes/Bullet.tscn")
 
 func get_input():

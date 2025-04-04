@@ -1,0 +1,15 @@
+
+
+
+
+
+
+
+
+extends AnimatedSprite2D
+
+
+
+
+
+	

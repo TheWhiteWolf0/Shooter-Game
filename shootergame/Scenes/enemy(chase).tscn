@@ -56,7 +56,7 @@ position = Vector2(5.70595e-06, 0.997189)
 scale = Vector2(0.999999, 0.999999)
 shape = SubResource("CircleShape2D_5476s")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="defaultEnemy" type="AnimatedSprite2D" parent="."]
 scale = Vector2(8.25953, 8.25953)
 sprite_frames = SubResource("SpriteFrames_lgsyq")
 autoplay = "default"
