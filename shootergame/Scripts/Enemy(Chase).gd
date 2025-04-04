@@ -15,7 +15,7 @@ extends CharacterBody2D
 @onready var navigation_agent_2d: NavigationAgent2D = $NavigationAgent2D
 @export var target_to_chase: CharacterBody2D
 
-var tree_death = preload("res://animated_sprite_2d.tscn")
+var tree_death = preload("res://Scenes/animated_sprite_2d.tscn")
 
 const SPEED = 75
 

@@ -1,10 +1,46 @@
-[gd_scene load_steps=4 format=3 uid="uid://bnglv4xn425t0"]
+[gd_scene load_steps=9 format=3 uid="uid://bnglv4xn425t0"]
 
 [ext_resource type="Script" uid="uid://b137xqymket6b" path="res://Scripts/ammo_pick_up.gd" id="1_gkw8x"]
-[ext_resource type="Texture2D" uid="uid://cararyfg0c133" path="res://Sprite Frames/icon.svg" id="2_yn5o3"]
+[ext_resource type="Texture2D" uid="uid://bl85egp3uthy3" path="res://Sprite Frames/New Piskel (6).png" id="2_gkw8x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nofbm"]
-size = Vector2(356.249, 128.333)
+size = Vector2(393.75, 78.3335)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yn5o3"]
+atlas = ExtResource("2_gkw8x")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7au7j"]
+atlas = ExtResource("2_gkw8x")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cryh0"]
+atlas = ExtResource("2_gkw8x")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wxnvy"]
+atlas = ExtResource("2_gkw8x")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yvft8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yn5o3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7au7j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cryh0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wxnvy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="AmmoPack" type="Node2D"]
 
@@ -13,21 +49,13 @@ scale = Vector2(0.16, 0.599999)
 script = ExtResource("1_gkw8x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AmmoPickUp"]
-position = Vector2(-3.125, 0.833338)
-scale = Vector2(1, 1)
+position = Vector2(3.12499, -7.50001)
 shape = SubResource("RectangleShape2D_nofbm")
 
-[node name="Sprite2D" type="Sprite2D" parent="AmmoPickUp"]
-texture = ExtResource("2_yn5o3")
-
-[node name="Sprite2D2" type="Sprite2D" parent="AmmoPickUp"]
-position = Vector2(131.25, 0)
-scale = Vector2(0.7, 0.7)
-texture = ExtResource("2_yn5o3")
-
-[node name="Sprite2D3" type="Sprite2D" parent="AmmoPickUp"]
-position = Vector2(-137.5, 0)
-scale = Vector2(0.7, 0.7)
-texture = ExtResource("2_yn5o3")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AmmoPickUp"]
+scale = Vector2(11.75, 3.35714)
+sprite_frames = SubResource("SpriteFrames_yvft8")
+autoplay = "default"
+frame_progress = 0.515342
 
 [connection signal="body_entered" from="AmmoPickUp" to="AmmoPickUp" method="_on_body_entered"]
