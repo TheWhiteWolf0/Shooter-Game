@@ -58,7 +58,7 @@ func death():
 	if GlobalVariables.player_Health <= 0:
 		print("YOU DIED") 
 		# for now it will send the player to the upgrade scene#
-		get_tree().change_scene_to_file("res://DeathScence.tscn")
+		get_tree().change_scene_to_file("res://Scenes/DeathScence.tscn")
 		# Need to create a main menu/level select # 
 
 func _on_hit_box_area_entered(area: Area2D) -> void:
