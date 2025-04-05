@@ -1,26 +1,81 @@
-[gd_scene load_steps=4 format=3 uid="uid://p22sham85u4u"]
+[gd_scene load_steps=12 format=3 uid="uid://p22sham85u4u"]
 
 [ext_resource type="Script" uid="uid://drb6ldfxk4up8" path="res://Scripts/MedKit.gd" id="1_ixkmt"]
-[ext_resource type="Texture2D" uid="uid://cararyfg0c133" path="res://Sprite Frames/icon.svg" id="2_jeyla"]
+[ext_resource type="Texture2D" uid="uid://bdeur75lfr2cm" path="res://Sprite Frames/New Piskel (5).png" id="2_ixkmt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vnixv"]
-size = Vector2(36, 32)
+size = Vector2(20, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jeyla"]
+atlas = ExtResource("2_ixkmt")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ninxl"]
+atlas = ExtResource("2_ixkmt")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5nn0b"]
+atlas = ExtResource("2_ixkmt")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kr1rd"]
+atlas = ExtResource("2_ixkmt")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_obcfa"]
+atlas = ExtResource("2_ixkmt")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n0o4b"]
+atlas = ExtResource("2_ixkmt")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wk3un"]
+atlas = ExtResource("2_ixkmt")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i7ewt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jeyla")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ninxl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5nn0b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kr1rd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_obcfa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n0o4b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wk3un")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
 
 [node name="MedKit" type="Node2D"]
 
 [node name="MedKit" type="Area2D" parent="."]
+scale = Vector2(2.48, 2.48)
 script = ExtResource("1_ixkmt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MedKit"]
+position = Vector2(0, -1.5)
 shape = SubResource("RectangleShape2D_vnixv")
 
-[node name="Sprite2D2" type="Sprite2D" parent="MedKit"]
-rotation = -1.57251
-scale = Vector2(0.0939748, 0.288755)
-texture = ExtResource("2_jeyla")
-
-[node name="Sprite2D" type="Sprite2D" parent="MedKit"]
-scale = Vector2(0.0939748, 0.288755)
-texture = ExtResource("2_jeyla")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="MedKit"]
+sprite_frames = SubResource("SpriteFrames_i7ewt")
+autoplay = "default"
+frame_progress = 0.931375
 
 [connection signal="body_entered" from="MedKit" to="MedKit" method="_on_body_entered"]

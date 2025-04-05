@@ -11,6 +11,8 @@ extends CharacterBody2D
 @onready var navigation_agent_2d: NavigationAgent2D = $NavigationAgent2D
 @export var target_to_chase: CharacterBody2D
 
+var tree_death = preload("res://Scenes/animated_sprite_2d.tscn")
+
 const SPEED = 50
 var enemy_health:int = 15
 
@@ -39,4 +41,7 @@ func enemydeath():
 	if enemy_health <= 0:
 		GlobalVariables.Currency = GlobalVariables.Currency + 1
 		GlobalVariables.player_Score = GlobalVariables.player_Score + 1
+		var tree_instance = tree_death.instantiate()
+		tree_instance.global_position = $Area2D.global_position
+		get_tree().get_root().call_deferred("add_child", tree_instance)
 		queue_free()

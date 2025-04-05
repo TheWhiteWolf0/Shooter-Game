@@ -1,19 +1,81 @@
-[gd_scene load_steps=4 format=3 uid="uid://bolmq2h8nm0p5"]
+[gd_scene load_steps=12 format=3 uid="uid://dorkk81nkcr4a"]
 
 [ext_resource type="Script" uid="uid://bdyiqbwv55ms2" path="res://Scripts/bullet.gd" id="1_14k46"]
-[ext_resource type="Texture2D" uid="uid://cararyfg0c133" path="res://Sprite Frames/icon.svg" id="1_vlxeq"]
+[ext_resource type="Texture2D" uid="uid://ca8h14kmtuoj5" path="res://Sprite Frames/New Piskel.png" id="2_14k46"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_14k46"]
-size = Vector2(31, 9)
+size = Vector2(27, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qvus8"]
+atlas = ExtResource("2_14k46")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pypll"]
+atlas = ExtResource("2_14k46")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vg3fc"]
+atlas = ExtResource("2_14k46")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cvob7"]
+atlas = ExtResource("2_14k46")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7k4wi"]
+atlas = ExtResource("2_14k46")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a2eq7"]
+atlas = ExtResource("2_14k46")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_34s0o"]
+atlas = ExtResource("2_14k46")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cgt83"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qvus8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pypll")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vg3fc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cvob7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7k4wi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a2eq7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_34s0o")
+}],
+"loop": true,
+"name": &"Shot",
+"speed": 16.0
+}]
 
 [node name="Bullet__" type="Area2D"]
 script = ExtResource("1_14k46")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(15.5, -2.5)
 shape = SubResource("RectangleShape2D_14k46")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.261719, 0.078125)
-texture = ExtResource("1_vlxeq")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(15, 5.96046e-08)
+scale = Vector2(2.03789, 2.03789)
+sprite_frames = SubResource("SpriteFrames_cgt83")
+animation = &"Shot"
+autoplay = "Shot"
+frame_progress = 0.438591
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

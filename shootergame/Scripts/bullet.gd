@@ -8,7 +8,7 @@
 
 extends Area2D
 
-var speed = 850
+var speed = 500 # was 850 #
 
 func _physics_process(delta):
 	

@@ -1,0 +1,92 @@
+[gd_scene load_steps=11 format=3 uid="uid://6w6x2n5vsuo0"]
+
+[ext_resource type="Texture2D" uid="uid://cararyfg0c133" path="res://Sprite Frames/icon.svg" id="1_qmtu8"]
+[ext_resource type="PackedScene" uid="uid://d2noon1vftiyp" path="res://Scenes/Player.tscn" id="2_el23o"]
+[ext_resource type="PackedScene" uid="uid://1culhx83bl5l" path="res://Scenes/enemy(chase).tscn" id="3_ud2or"]
+[ext_resource type="PackedScene" uid="uid://bjw3uvhgoe0aa" path="res://Scenes/hud.tscn" id="4_ud2or"]
+[ext_resource type="PackedScene" uid="uid://p22sham85u4u" path="res://Scenes/MedKits.tscn" id="5_iph1d"]
+[ext_resource type="PackedScene" uid="uid://c24l7jjbv3iqt" path="res://Scenes/damage_area.tscn" id="6_2dkxq"]
+[ext_resource type="PackedScene" uid="uid://bnglv4xn425t0" path="res://Scenes/ammo_pack.tscn" id="6_2n37a"]
+[ext_resource type="PackedScene" uid="uid://cwfkd43n5erxt" path="res://Scenes/enemy(multi_hit).tscn" id="8_2dkxq"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_83j0u"]
+vertices = PackedVector2Array(1142.95, 636.023, 9.03125, 638.969, 9.75781, 404.203, 435.32, 404.203, 755.227, 253.203, 1141.18, 253.203, 435.32, 323.359, 1140.04, 10.0313, 1140.79, 172.359, 755.227, 172.359, 10.9609, 13.9609, 10.0078, 323.359)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 0, 3, 6), PackedInt32Array(7, 8, 9, 10), PackedInt32Array(6, 11, 10, 9, 4)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(1, 4, 1150, 0, 1153, 646, -1, 649)])
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_el23o"]
+size = Vector2(119, 117)
+
+[node name="TestScence" type="Node2D"]
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_83j0u")
+
+[node name="Walls" type="Node2D" parent="NavigationRegion2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="NavigationRegion2D/Walls"]
+position = Vector2(220, 363)
+scale = Vector2(3.48, 0.52)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/Walls/StaticBody2D"]
+modulate = Color(0.7663, 0.0123857, 0.169172, 1)
+position = Vector2(-0.5, 1.5)
+shape = SubResource("RectangleShape2D_el23o")
+
+[node name="Sprite2D" type="Sprite2D" parent="NavigationRegion2D/Walls/StaticBody2D"]
+modulate = Color(0, 0.027451, 0, 1)
+texture = ExtResource("1_qmtu8")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="NavigationRegion2D/Walls"]
+position = Vector2(960, 212)
+scale = Vector2(3.24623, 0.52)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/Walls/StaticBody2D2"]
+modulate = Color(0.7663, 0.0123857, 0.169172, 1)
+position = Vector2(-0.5, 1.5)
+shape = SubResource("RectangleShape2D_el23o")
+
+[node name="Sprite2D" type="Sprite2D" parent="NavigationRegion2D/Walls/StaticBody2D2"]
+modulate = Color(0, 0.027451, 0, 1)
+texture = ExtResource("1_qmtu8")
+
+[node name="Player" parent="." instance=ExtResource("2_el23o")]
+position = Vector2(592, 240)
+scale = Vector2(0.48, 0.48)
+
+[node name="HUD" parent="Player" instance=ExtResource("4_ud2or")]
+position = Vector2(-495.833, -79.1667)
+scale = Vector2(2.08333, 2.08333)
+
+[node name="AllMobs" type="Node2D" parent="."]
+position = Vector2(1054, 355)
+scale = Vector2(0.50141, 0.50141)
+
+[node name="EnemyChase" parent="AllMobs" node_paths=PackedStringArray("target_to_chase") instance=ExtResource("3_ud2or")]
+position = Vector2(-927.385, 283.201)
+scale = Vector2(1, 1)
+target_to_chase = NodePath("../../Player")
+
+[node name="HealthPacks" type="Node2D" parent="."]
+
+[node name="MedKit" parent="HealthPacks" instance=ExtResource("5_iph1d")]
+position = Vector2(1088, 572)
+
+[node name="MedKit2" parent="HealthPacks" instance=ExtResource("5_iph1d")]
+position = Vector2(54, 599)
+
+[node name="AmmoPacks" type="Node2D" parent="."]
+
+[node name="AmmoPack" parent="AmmoPacks" instance=ExtResource("6_2n37a")]
+position = Vector2(1051, 86)
+
+[node name="AmmoPack2" parent="AmmoPacks" instance=ExtResource("6_2n37a")]
+position = Vector2(71, 255)
+
+[node name="DamageArea2" parent="." instance=ExtResource("6_2dkxq")]
+position = Vector2(236, 166)
+scale = Vector2(0.50141, 0.50141)
+
+[node name="Enemy(Multi-hit)" parent="." node_paths=PackedStringArray("target_to_chase") instance=ExtResource("8_2dkxq")]
+position = Vector2(394, 499)
+target_to_chase = NodePath("../Player")

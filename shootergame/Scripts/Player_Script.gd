@@ -15,10 +15,6 @@ var reload_delay = false
 
 var bullet = preload("res://Scenes/Bullet.tscn")
 
-
-#var player_position = position
-
-
 func get_input():
 	var input_direction = Input.get_vector("Left", "Right", "Up", "Down")
 	velocity = input_direction * GlobalVariables.player_speed
@@ -46,7 +42,7 @@ func _physics_process(delta):
 	player_weapon()
 	upgrade()
 	death()
-	
+
 func fire():
 	var bullet_instance = bullet.instantiate()
 	bullet_instance.global_position = shooting_point.global_position
@@ -62,7 +58,7 @@ func death():
 	if GlobalVariables.player_Health <= 0:
 		print("YOU DIED") 
 		# for now it will send the player to the upgrade scene#
-		get_tree().change_scene_to_file("res://Scenes/control.tscn")
+		get_tree().change_scene_to_file("res://DeathScence.tscn")
 		# Need to create a main menu/level select # 
 
 func _on_hit_box_area_entered(area: Area2D) -> void:

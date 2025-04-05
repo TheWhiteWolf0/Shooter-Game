@@ -1,10 +1,46 @@
-[gd_scene load_steps=5 format=3 uid="uid://1culhx83bl5l"]
+[gd_scene load_steps=10 format=3 uid="uid://1culhx83bl5l"]
 
 [ext_resource type="Script" uid="uid://coo5demru8hfy" path="res://Scripts/Enemy(Chase).gd" id="1_d570n"]
-[ext_resource type="Texture2D" uid="uid://cararyfg0c133" path="res://Sprite Frames/icon.svg" id="2_5476s"]
+[ext_resource type="Texture2D" uid="uid://d3ue64ipi726e" path="res://Sprite Frames/New Piskel (3).png" id="2_d570n"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5476s"]
 radius = 69.9811
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5476s"]
+atlas = ExtResource("2_d570n")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s0lla"]
+atlas = ExtResource("2_d570n")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x1yg0"]
+atlas = ExtResource("2_d570n")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1rpas"]
+atlas = ExtResource("2_d570n")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lgsyq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5476s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s0lla")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x1yg0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1rpas")
+}],
+"loop": true,
+"name": &"default",
+"speed": 16.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_d570n"]
 radius = 64.3168
@@ -20,9 +56,11 @@ position = Vector2(5.70595e-06, 0.997189)
 scale = Vector2(0.999999, 0.999999)
 shape = SubResource("CircleShape2D_5476s")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(0.917647, 0.027451, 0, 1)
-texture = ExtResource("2_5476s")
+[node name="defaultEnemy" type="AnimatedSprite2D" parent="."]
+scale = Vector2(8.25953, 8.25953)
+sprite_frames = SubResource("SpriteFrames_lgsyq")
+autoplay = "default"
+frame_progress = 0.595636
 
 [node name="Area2D" type="Area2D" parent="."]
 
