@@ -3,8 +3,9 @@
 [ext_resource type="Script" uid="uid://coo5demru8hfy" path="res://Scripts/Enemy(Chase).gd" id="1_d570n"]
 [ext_resource type="Texture2D" uid="uid://d3ue64ipi726e" path="res://Sprite Frames/New Piskel (3).png" id="2_d570n"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_5476s"]
-radius = 69.9811
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d570n"]
+radius = 41.8819
+height = 129.635
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5476s"]
 atlas = ExtResource("2_d570n")
@@ -42,8 +43,9 @@ animations = [{
 "speed": 16.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_d570n"]
-radius = 64.3168
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5476s"]
+radius = 61.8258
+height = 163.539
 
 [node name="EnemyChase" type="CharacterBody2D"]
 scale = Vector2(0.50141, 0.50141)
@@ -54,7 +56,7 @@ script = ExtResource("1_d570n")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(5.70595e-06, 0.997189)
 scale = Vector2(0.999999, 0.999999)
-shape = SubResource("CircleShape2D_5476s")
+shape = SubResource("CapsuleShape2D_d570n")
 
 [node name="defaultEnemy" type="AnimatedSprite2D" parent="."]
 scale = Vector2(8.25953, 8.25953)
@@ -65,8 +67,8 @@ frame_progress = 0.595636
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-4.39834e-06, 3.4795e-06)
+position = Vector2(-9.09495e-13, 5.98313)
 scale = Vector2(0.999998, 0.999998)
-shape = SubResource("CircleShape2D_d570n")
+shape = SubResource("CapsuleShape2D_5476s")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

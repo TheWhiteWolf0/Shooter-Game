@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://6w6x2n5vsuo0"]
+[gd_scene load_steps=15 format=3 uid="uid://6w6x2n5vsuo0"]
 
 [ext_resource type="Texture2D" uid="uid://cjmcbgx1e2twn" path="res://Sprite Frames/GrassPixelArtGround.jpg" id="1_2dkxq"]
 [ext_resource type="Texture2D" uid="uid://cararyfg0c133" path="res://Sprite Frames/icon.svg" id="1_qmtu8"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cwfkd43n5erxt" path="res://Scenes/enemy(multi_hit).tscn" id="8_2dkxq"]
 [ext_resource type="Texture2D" uid="uid://dk12lutbhh0r4" path="res://Sprite Frames/New Piskel (8).png" id="9_3ymcv"]
 [ext_resource type="Texture2D" uid="uid://b62m2xi8ulgk2" path="res://Sprite Frames/New Piskel (10).png" id="11_sr2ag"]
+[ext_resource type="PackedScene" uid="uid://c14f4ls6glq8w" path="res://Scenes/Spawner.tscn" id="12_dqc4r"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_83j0u"]
 vertices = PackedVector2Array(1142.95, 636.023, 9.03125, 638.969, 9.75781, 404.203, 435.32, 404.203, 755.227, 253.203, 1141.18, 253.203, 435.32, 323.359, 1140.04, 10.0313, 1140.79, 172.359, 755.227, 172.359, 10.9609, 13.9609, 10.0078, 323.359)
@@ -163,4 +164,8 @@ position = Vector2(71, 255)
 
 [node name="NewPiskel(10)" type="Sprite2D" parent="."]
 position = Vector2(469, 171)
+scale = Vector2(2.84, 2.84)
 texture = ExtResource("11_sr2ag")
+
+[node name="Spawner" parent="." instance=ExtResource("12_dqc4r")]
+position = Vector2(139, 599)
