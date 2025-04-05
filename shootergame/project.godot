@@ -18,7 +18,6 @@ config/icon="res://Sprite Frames/icon.svg"
 [autoload]
 
 GlobalVariables="*res://GlobalVariables/GloabalVariables.gd"
-PlayerPosition="*res://GlobalVariables/player_position.gd"
 
 [input]
 
