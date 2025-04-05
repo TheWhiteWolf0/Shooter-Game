@@ -1,13 +1,16 @@
-[gd_scene load_steps=11 format=3 uid="uid://6w6x2n5vsuo0"]
+[gd_scene load_steps=14 format=3 uid="uid://6w6x2n5vsuo0"]
 
 [ext_resource type="Texture2D" uid="uid://cjmcbgx1e2twn" path="res://Sprite Frames/GrassPixelArtGround.jpg" id="1_2dkxq"]
 [ext_resource type="Texture2D" uid="uid://cararyfg0c133" path="res://Sprite Frames/icon.svg" id="1_qmtu8"]
 [ext_resource type="PackedScene" uid="uid://d2noon1vftiyp" path="res://Scenes/Player.tscn" id="2_el23o"]
 [ext_resource type="PackedScene" uid="uid://1culhx83bl5l" path="res://Scenes/enemy(chase).tscn" id="3_ud2or"]
+[ext_resource type="Texture2D" uid="uid://bom5srmjbalw2" path="res://Sprite Frames/New Piskel (9).png" id="4_bsv7i"]
 [ext_resource type="PackedScene" uid="uid://bjw3uvhgoe0aa" path="res://Scenes/hud.tscn" id="4_ud2or"]
 [ext_resource type="PackedScene" uid="uid://p22sham85u4u" path="res://Scenes/MedKits.tscn" id="5_iph1d"]
 [ext_resource type="PackedScene" uid="uid://bnglv4xn425t0" path="res://Scenes/ammo_pack.tscn" id="6_2n37a"]
 [ext_resource type="PackedScene" uid="uid://cwfkd43n5erxt" path="res://Scenes/enemy(multi_hit).tscn" id="8_2dkxq"]
+[ext_resource type="Texture2D" uid="uid://dk12lutbhh0r4" path="res://Sprite Frames/New Piskel (8).png" id="9_3ymcv"]
+[ext_resource type="Texture2D" uid="uid://b62m2xi8ulgk2" path="res://Sprite Frames/New Piskel (10).png" id="11_sr2ag"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_83j0u"]
 vertices = PackedVector2Array(1142.95, 636.023, 9.03125, 638.969, 9.75781, 404.203, 435.32, 404.203, 755.227, 253.203, 1141.18, 253.203, 435.32, 323.359, 1140.04, 10.0313, 1140.79, 172.359, 755.227, 172.359, 10.9609, 13.9609, 10.0078, 323.359)
@@ -54,6 +57,46 @@ shape = SubResource("RectangleShape2D_el23o")
 modulate = Color(0, 0.027451, 0, 1)
 texture = ExtResource("1_qmtu8")
 
+[node name="NewPiskel(8)" type="Sprite2D" parent="NavigationRegion2D/GrassPixelArtGround4/Walls/StaticBody2D"]
+position = Vector2(-6.36782, -2.23077)
+scale = Vector2(0.643678, 4.30769)
+texture = ExtResource("9_3ymcv")
+
+[node name="NewPiskel(8)2" type="Sprite2D" parent="NavigationRegion2D/GrassPixelArtGround4/Walls/StaticBody2D"]
+position = Vector2(14.0345, -2.23077)
+scale = Vector2(0.643678, 4.30769)
+texture = ExtResource("9_3ymcv")
+
+[node name="NewPiskel(8)3" type="Sprite2D" parent="NavigationRegion2D/GrassPixelArtGround4/Walls/StaticBody2D"]
+position = Vector2(34.4368, -2.23077)
+scale = Vector2(0.643678, 4.30769)
+texture = ExtResource("9_3ymcv")
+
+[node name="NewPiskel(8)4" type="Sprite2D" parent="NavigationRegion2D/GrassPixelArtGround4/Walls/StaticBody2D"]
+position = Vector2(54.8391, -2.23077)
+scale = Vector2(0.643678, 4.30769)
+texture = ExtResource("9_3ymcv")
+
+[node name="NewPiskel(8)5" type="Sprite2D" parent="NavigationRegion2D/GrassPixelArtGround4/Walls/StaticBody2D"]
+position = Vector2(-86.5402, -2.23077)
+scale = Vector2(0.643678, 4.30769)
+texture = ExtResource("9_3ymcv")
+
+[node name="NewPiskel(8)6" type="Sprite2D" parent="NavigationRegion2D/GrassPixelArtGround4/Walls/StaticBody2D"]
+position = Vector2(-66.1379, -2.23077)
+scale = Vector2(0.643678, 4.30769)
+texture = ExtResource("9_3ymcv")
+
+[node name="NewPiskel(8)7" type="Sprite2D" parent="NavigationRegion2D/GrassPixelArtGround4/Walls/StaticBody2D"]
+position = Vector2(-45.7356, -2.23077)
+scale = Vector2(0.643678, 4.30769)
+texture = ExtResource("9_3ymcv")
+
+[node name="NewPiskel(8)8" type="Sprite2D" parent="NavigationRegion2D/GrassPixelArtGround4/Walls/StaticBody2D"]
+position = Vector2(-25.3333, -2.23077)
+scale = Vector2(0.643678, 4.30769)
+texture = ExtResource("9_3ymcv")
+
 [node name="StaticBody2D2" type="StaticBody2D" parent="NavigationRegion2D/GrassPixelArtGround4/Walls"]
 position = Vector2(960, 212)
 scale = Vector2(3.24623, 0.52)
@@ -66,6 +109,21 @@ shape = SubResource("RectangleShape2D_el23o")
 [node name="Sprite2D" type="Sprite2D" parent="NavigationRegion2D/GrassPixelArtGround4/Walls/StaticBody2D2"]
 modulate = Color(0, 0.027451, 0, 1)
 texture = ExtResource("1_qmtu8")
+
+[node name="NewPiskel(9)" type="Sprite2D" parent="NavigationRegion2D/GrassPixelArtGround4/Walls/StaticBody2D2"]
+position = Vector2(-113.054, 275)
+scale = Vector2(1.13362, 7.07692)
+texture = ExtResource("4_bsv7i")
+
+[node name="NewPiskel(9)2" type="Sprite2D" parent="NavigationRegion2D/GrassPixelArtGround4/Walls/StaticBody2D2"]
+position = Vector2(-114.286, 63.4615)
+scale = Vector2(1.13362, 7.07692)
+texture = ExtResource("4_bsv7i")
+
+[node name="NewPiskel(9)3" type="Sprite2D" parent="NavigationRegion2D/GrassPixelArtGround4/Walls/StaticBody2D2"]
+position = Vector2(-114.286, -148.077)
+scale = Vector2(1.13362, 7.07692)
+texture = ExtResource("4_bsv7i")
 
 [node name="Player" parent="." instance=ExtResource("2_el23o")]
 position = Vector2(592, 240)
@@ -104,3 +162,7 @@ position = Vector2(1051, 86)
 
 [node name="AmmoPack2" parent="AmmoPacks" instance=ExtResource("6_2n37a")]
 position = Vector2(71, 255)
+
+[node name="NewPiskel(10)" type="Sprite2D" parent="."]
+position = Vector2(469, 171)
+texture = ExtResource("11_sr2ag")
