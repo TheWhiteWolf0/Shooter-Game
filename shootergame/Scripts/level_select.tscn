@@ -45,8 +45,10 @@ text = "Upgrades"
 
 [node name="Options" type="Button" parent="."]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 1075.0
+offset_top = 7.0
+offset_right = 1145.0
+offset_bottom = 38.0
 text = "Options"
 
 [connection signal="pressed" from="Level1" to="." method="_on_level_1_pressed"]
