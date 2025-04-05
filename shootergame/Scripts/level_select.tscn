@@ -43,7 +43,14 @@ offset_right = 632.0
 offset_bottom = 529.0
 text = "Upgrades"
 
+[node name="Options" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Options"
+
 [connection signal="pressed" from="Level1" to="." method="_on_level_1_pressed"]
 [connection signal="pressed" from="Level2" to="." method="_on_level_2_pressed"]
 [connection signal="pressed" from="Level3" to="." method="_on_level_3_pressed"]
 [connection signal="pressed" from="Upgrades" to="." method="_on_upgrades_pressed"]
+[connection signal="pressed" from="Options" to="." method="_on_options_pressed"]
