@@ -1,5 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://6w6x2n5vsuo0"]
+[gd_scene load_steps=11 format=3 uid="uid://6w6x2n5vsuo0"]
 
+[ext_resource type="Texture2D" uid="uid://cjmcbgx1e2twn" path="res://Sprite Frames/GrassPixelArtGround.jpg" id="1_2dkxq"]
 [ext_resource type="Texture2D" uid="uid://cararyfg0c133" path="res://Sprite Frames/icon.svg" id="1_qmtu8"]
 [ext_resource type="PackedScene" uid="uid://d2noon1vftiyp" path="res://Scenes/Player.tscn" id="2_el23o"]
 [ext_resource type="PackedScene" uid="uid://1culhx83bl5l" path="res://Scenes/enemy(chase).tscn" id="3_ud2or"]
@@ -21,31 +22,48 @@ size = Vector2(119, 117)
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
 navigation_polygon = SubResource("NavigationPolygon_83j0u")
 
-[node name="Walls" type="Node2D" parent="NavigationRegion2D"]
+[node name="GrassPixelArtGround" type="Sprite2D" parent="NavigationRegion2D"]
+position = Vector2(367, 190)
+texture = ExtResource("1_2dkxq")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="NavigationRegion2D/Walls"]
+[node name="GrassPixelArtGround2" type="Sprite2D" parent="NavigationRegion2D"]
+position = Vector2(1087, 190)
+texture = ExtResource("1_2dkxq")
+
+[node name="GrassPixelArtGround3" type="Sprite2D" parent="NavigationRegion2D"]
+position = Vector2(367, 549)
+texture = ExtResource("1_2dkxq")
+
+[node name="GrassPixelArtGround4" type="Sprite2D" parent="NavigationRegion2D"]
+position = Vector2(1087, 549)
+texture = ExtResource("1_2dkxq")
+
+[node name="Walls" type="Node2D" parent="NavigationRegion2D/GrassPixelArtGround4"]
+position = Vector2(-1087, -549)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="NavigationRegion2D/GrassPixelArtGround4/Walls"]
 position = Vector2(220, 363)
 scale = Vector2(3.48, 0.52)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/Walls/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/GrassPixelArtGround4/Walls/StaticBody2D"]
 modulate = Color(0.7663, 0.0123857, 0.169172, 1)
 position = Vector2(-0.5, 1.5)
 shape = SubResource("RectangleShape2D_el23o")
 
-[node name="Sprite2D" type="Sprite2D" parent="NavigationRegion2D/Walls/StaticBody2D"]
+[node name="Sprite2D" type="Sprite2D" parent="NavigationRegion2D/GrassPixelArtGround4/Walls/StaticBody2D"]
 modulate = Color(0, 0.027451, 0, 1)
 texture = ExtResource("1_qmtu8")
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="NavigationRegion2D/Walls"]
+[node name="StaticBody2D2" type="StaticBody2D" parent="NavigationRegion2D/GrassPixelArtGround4/Walls"]
 position = Vector2(960, 212)
 scale = Vector2(3.24623, 0.52)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/Walls/StaticBody2D2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/GrassPixelArtGround4/Walls/StaticBody2D2"]
 modulate = Color(0.7663, 0.0123857, 0.169172, 1)
 position = Vector2(-0.5, 1.5)
 shape = SubResource("RectangleShape2D_el23o")
 
-[node name="Sprite2D" type="Sprite2D" parent="NavigationRegion2D/Walls/StaticBody2D2"]
+[node name="Sprite2D" type="Sprite2D" parent="NavigationRegion2D/GrassPixelArtGround4/Walls/StaticBody2D2"]
 modulate = Color(0, 0.027451, 0, 1)
 texture = ExtResource("1_qmtu8")
 
@@ -68,16 +86,6 @@ target_to_chase = NodePath("../../Player")
 
 [node name="Enemy(Multi-hit)" parent="AllMobs" node_paths=PackedStringArray("target_to_chase") instance=ExtResource("8_2dkxq")]
 position = Vector2(-1316.29, 287.19)
-scale = Vector2(1.99438, 1.99438)
-target_to_chase = NodePath("../../Player")
-
-[node name="Enemy(Multi-hit)2" parent="AllMobs" node_paths=PackedStringArray("target_to_chase") instance=ExtResource("8_2dkxq")]
-position = Vector2(-345.027, 97.7244)
-scale = Vector2(1.99438, 1.99438)
-target_to_chase = NodePath("../../Player")
-
-[node name="Enemy(Multi-hit)3" parent="AllMobs" node_paths=PackedStringArray("target_to_chase") instance=ExtResource("8_2dkxq")]
-position = Vector2(-1892.66, 267.246)
 scale = Vector2(1.99438, 1.99438)
 target_to_chase = NodePath("../../Player")
 
