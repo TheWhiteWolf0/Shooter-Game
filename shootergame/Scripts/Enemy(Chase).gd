@@ -13,7 +13,7 @@ extends CharacterBody2D
 
 
 @onready var navigation_agent_2d: NavigationAgent2D = $NavigationAgent2D
-@export var target_to_chase: CharacterBody2D
+@onready var target_to_chase: CharacterBody2D = get_parent().get_node("Player")
 
 var tree_death = preload("res://Scenes/animated_sprite_2d.tscn")
 

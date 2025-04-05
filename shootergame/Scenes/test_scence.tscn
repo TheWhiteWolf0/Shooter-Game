@@ -125,6 +125,13 @@ position = Vector2(-114.286, -148.077)
 scale = Vector2(1.13362, 7.07692)
 texture = ExtResource("4_bsv7i")
 
+[node name="EnemyChase" parent="." instance=ExtResource("3_ud2or")]
+position = Vector2(589, 497)
+
+[node name="Enemy(Multi-hit)" parent="." instance=ExtResource("8_2dkxq")]
+position = Vector2(394, 499)
+scale = Vector2(1, 1)
+
 [node name="Player" parent="." instance=ExtResource("2_el23o")]
 position = Vector2(592, 240)
 scale = Vector2(0.48, 0.48)
@@ -136,16 +143,6 @@ scale = Vector2(2.08333, 2.08333)
 [node name="AllMobs" type="Node2D" parent="."]
 position = Vector2(1054, 355)
 scale = Vector2(0.50141, 0.50141)
-
-[node name="EnemyChase" parent="AllMobs" node_paths=PackedStringArray("target_to_chase") instance=ExtResource("3_ud2or")]
-position = Vector2(-927.385, 283.201)
-scale = Vector2(1, 1)
-target_to_chase = NodePath("../../Player")
-
-[node name="Enemy(Multi-hit)" parent="AllMobs" node_paths=PackedStringArray("target_to_chase") instance=ExtResource("8_2dkxq")]
-position = Vector2(-1316.29, 287.19)
-scale = Vector2(1.99438, 1.99438)
-target_to_chase = NodePath("../../Player")
 
 [node name="HealthPacks" type="Node2D" parent="."]
 
