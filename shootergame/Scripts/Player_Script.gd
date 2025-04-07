@@ -40,7 +40,7 @@ func _physics_process(delta):
 	get_input()
 	move_and_slide()
 	player_weapon()
-	upgrade()
+	#upgrade()
 	death()
 
 func fire():
