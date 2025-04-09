@@ -15,3 +15,5 @@ func _physics_process(delta: float) -> void:
 	$CanvasLayer/player_Health.text = "Health: " + str(GlobalVariables.player_Health)
 	$CanvasLayer/BloodEchoes.text = "BloodEchoes: " + str(GlobalVariables.Currency)
 	$CanvasLayer/Score.text = "Score: " + str(GlobalVariables.player_Score)
+	
+	

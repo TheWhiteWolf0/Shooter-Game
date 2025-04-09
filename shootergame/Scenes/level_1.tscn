@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://ccbqwlrix12qd"]
+[gd_scene load_steps=21 format=4 uid="uid://ccbqwlrix12qd"]
 
 [ext_resource type="Texture2D" uid="uid://btlskccr8rifn" path="res://Sprout Lands - Sprites - Basic pack/Tilesets/Water.png" id="1_lsmp6"]
 [ext_resource type="Texture2D" uid="uid://dringsv7csl7o" path="res://Sprout Lands - Sprites - Basic pack/Tilesets/Grass.png" id="2_xrdnt"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bwo67biqn1njn" path="res://Sprout Lands - Sprites - Basic pack/Objects/Basic_Grass_Biom_things.png" id="5_af3po"]
 [ext_resource type="Texture2D" uid="uid://b62m2xi8ulgk2" path="res://Sprite Frames/New Piskel (10).png" id="6_uy8f0"]
 [ext_resource type="PackedScene" uid="uid://d2noon1vftiyp" path="res://Scenes/Player.tscn" id="7_6r07y"]
+[ext_resource type="PackedScene" uid="uid://bjw3uvhgoe0aa" path="res://Scenes/hud.tscn" id="8_xrdnt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6ioyp"]
 texture = ExtResource("1_lsmp6")
@@ -457,3 +458,5 @@ shape = SubResource("CapsuleShape2D_lsmp6")
 [node name="Player" parent="." instance=ExtResource("7_6r07y")]
 position = Vector2(-59.4498, 19.1388)
 scale = Vector2(0.100478, 0.100478)
+
+[node name="HUD" parent="Player" instance=ExtResource("8_xrdnt")]
