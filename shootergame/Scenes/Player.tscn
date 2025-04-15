@@ -49,7 +49,7 @@ position = Vector2(3.03226, -3.48342)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -2)
-zoom = Vector2(0.8, 0.8)
+zoom = Vector2(0.65, 0.65)
 
 [node name="HitBox" type="Area2D" parent="."]
 
