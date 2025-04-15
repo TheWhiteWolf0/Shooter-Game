@@ -1,13 +1,14 @@
-[gd_scene load_steps=22 format=4 uid="uid://c0168coakp6ft"]
+[gd_scene load_steps=23 format=4 uid="uid://c0168coakp6ft"]
 
-[ext_resource type="Texture2D" uid="uid://btlskccr8rifn" path="res://Sprout Lands - Sprites - Basic pack/Tilesets/Water.png" id="1_chaov"]
-[ext_resource type="Texture2D" uid="uid://dringsv7csl7o" path="res://Sprout Lands - Sprites - Basic pack/Tilesets/Grass.png" id="2_o0rcv"]
-[ext_resource type="Texture2D" uid="uid://b2wrnv1cqs6mt" path="res://Sprout Lands - Sprites - Basic pack/Objects/Wood_Bridge.png" id="3_nm8qd"]
-[ext_resource type="PackedScene" uid="uid://d2noon1vftiyp" path="res://Scenes/Player.tscn" id="4_aq45b"]
-[ext_resource type="Texture2D" uid="uid://bwo67biqn1njn" path="res://Sprout Lands - Sprites - Basic pack/Objects/Basic_Grass_Biom_things.png" id="4_chaov"]
-[ext_resource type="PackedScene" uid="uid://bjw3uvhgoe0aa" path="res://Scenes/hud.tscn" id="5_jukch"]
-[ext_resource type="Texture2D" uid="uid://b62m2xi8ulgk2" path="res://Sprite Frames/New Piskel (10).png" id="5_o0rcv"]
-[ext_resource type="PackedScene" uid="uid://cwfkd43n5erxt" path="res://Scenes/enemy(multi_hit).tscn" id="7_nm8qd"]
+[ext_resource type="Texture2D" uid="uid://btlskccr8rifn" path="res://Sprout Lands - Sprites - Basic pack/Tilesets/Water.png" id="1_vplc7"]
+[ext_resource type="Texture2D" uid="uid://dringsv7csl7o" path="res://Sprout Lands - Sprites - Basic pack/Tilesets/Grass.png" id="2_p5c1a"]
+[ext_resource type="Texture2D" uid="uid://b2wrnv1cqs6mt" path="res://Sprout Lands - Sprites - Basic pack/Objects/Wood_Bridge.png" id="3_vruis"]
+[ext_resource type="Texture2D" uid="uid://bwo67biqn1njn" path="res://Sprout Lands - Sprites - Basic pack/Objects/Basic_Grass_Biom_things.png" id="4_xrxow"]
+[ext_resource type="Texture2D" uid="uid://b62m2xi8ulgk2" path="res://Sprite Frames/New Piskel (10).png" id="5_k2xpx"]
+[ext_resource type="PackedScene" uid="uid://d2noon1vftiyp" path="res://Scenes/Player.tscn" id="6_bty1o"]
+[ext_resource type="PackedScene" uid="uid://bjw3uvhgoe0aa" path="res://Scenes/hud.tscn" id="7_s1bpp"]
+[ext_resource type="PackedScene" uid="uid://b4uyylce6aqff" path="res://Scenes/node_2d.tscn" id="8_h1lj6"]
+[ext_resource type="PackedScene" uid="uid://blmvkqgqq08j" path="res://Scenes/multi_hit_spawer.tscn" id="9_kt7k4"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_aq45b"]
 vertices = PackedVector2Array(67.9688, -532.211, 67.2266, -542.953, 190.102, -542.57, 191, -511.039, -317.641, 44.2266, -334.391, 44.2266, -332.242, 2.21875, -317.406, -14.5625, -188.609, -373.852, -188.953, -381.797, -125.867, -382.68, 48.3203, 256.453, 18.9766, 255.594, 19.8906, 238.711, 435.703, -487.227, 451.508, -466.813, 301.523, -503.547, 301.523, -513.711, 355.563, -512.922, 419.008, -503.75, 225.438, -511.492, 225.438, -503.547, 4.90625, -445.203, 20.2266, -465.117, 36.1094, -482.711, 54.6406, -495.742, 35.6875, -495.281, 366.938, -522.281, 366.938, -529.461, 402.023, -529.172, 402.203, -527.109, 131.047, 289.109, 66.3594, 287.758, 66.7891, 272.438, 179.133, 302.797, 131.047, 302.797, -91.2266, -395.859, -91.6797, -414.648, -75.2969, -415.117, 254.844, 285.75, 222.391, 317.531, 179.133, 317.203, 226.531, 301.82, -76.2109, -430.313, -44.8828, -432.469, -71.7109, 223.008, -109.273, 222.672, -109.273, 207.031, -32.8203, 222.438, 562.617, -226.156, 577.117, -226.156, 577.492, -209.727, 607.352, -160.703, 608.133, -31.2031, 585.398, -30.4922, 605.641, -160.859, 403.906, -516.672, -333.07, -13.2422, 4.4375, -464.227, -243.57, 111.961, -257.523, 98.0469, -269.938, 76.0391, -300.977, -94.2734, -301.867, -174.688, -285.156, -175.594, -225.492, 128.156, -31.9297, 238.711, -44.0313, -445.656, -195.273, 175.813, -205.578, 175.43, -205.891, 158.57, -284.633, -228.727, -284.422, -236.789, -257.031, -237.703, 547.742, -273.961, 561.273, -273.523, 324.609, 271.133, 512.953, 153.094, 512.531, 176.828, 511.539, 176.891, -174.922, 206.117, -175.68, 195.406, 525.117, -370.641, 529.5, -370.289, 529.867, -334.391, -288.711, 62.5391, -316.719, 61.2266, 543.109, -321.688, 545.063, -321.594, 20.2266, -480.883, -239.227, -351.258, -237.531, -367.438, -210.406, -367.789, -318.438, -78.0781, -317.047, -93.7813, 596.992, -163.359, 577.961, -22.9688, -257.031, -254.719, -254.594, -349.531, 241.633, 294.063, 239.852, 302.688, -212.359, 144.719, 562.789, 78.6563, 562.383, 98.2109, 549.898, 99.7031, 562.789, 66.6328, -123.672, -396.32, 49.6797, 271.477, 498.102, 178.133, 485.563, -436.523, 497.063, -434.922, 497.422, -413.844, -286.547, 76.0391, 578.461, -194.898, 592.156, -192.594, 592.156, -175.023, 52.7422, -528.602, 414.922, -515.281, 418.273, -514.891, -255.898, 111.117, 577.102, 66.1875, 574.93, 66.6328, -269.938, 95.1328, 496.031, 205.352, 496.031, 209.43, 481.469, 213.102, 444.938, -483.258, 450.047, -482.461, 480.992, 241.023, 467.977, 244.453, 504.023, -403.172, 513.07, -403.172, 513.211, -403.133, 513.93, -381.18, 545.852, 126.203, 545.367, 129.219, 544.594, 129.344, 529.758, 128.922, 545.367, 112.25, 429.609, -499.008, 433.75, -498.25, 478.242, -451.477, 482.82, -450.672, 534.367, -324.211, -239.891, 126.289, 463.391, -466.813, 466.742, -466.242, 469.477, -455.242, -223.109, 142.008, -191.828, 191.578, 433.43, 267.109, 432.563, 268.852, 438.406, 257.094, 464.102, 256.133, 459.211, 257.094, 496.953, 191.938, 518.039, -374.18, 516.617, 128.922, 320.961, 282.844, 317.641, 286.18, 512.953, 142.523)
@@ -15,7 +16,7 @@ polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Arr
 outlines = Array[PackedVector2Array]([PackedVector2Array(-267.034, -247.367, -267.034, -254.985, -264.364, -358.503, -248.342, -360.296, -246.562, -377.325, -211.847, -377.773, -198.941, -381.358, -199.386, -391.665, -134.407, -392.561, -132.182, -406.453, -101.473, -406.005, -101.918, -424.378, -85.8961, -424.826, -86.7862, -439.615, -54.297, -441.855, -53.4069, -455.747, -5.34069, -455.299, -5.78575, -473.672, 10.2363, -474.569, 10.2363, -489.805, 25.8133, -491.598, 25.3683, -505.041, 44.0607, -505.49, 42.2805, -536.41, 57.4124, -539.995, 56.5223, -552.991, 200.276, -551.199, 200.721, -521.174, 235.435, -521.622, 235.435, -513.556, 291.513, -513.556, 291.513, -523.863, 352.04, -522.967, 356.936, -527, 356.936, -539.547, 411.233, -539.099, 412.123, -528.344, 412.568, -525.655, 416.129, -525.207, 427.7, -523.863, 428.59, -510.419, 432.596, -508.626, 442.387, -506.834, 444.612, -494.286, 447.728, -492.942, 459.299, -491.149, 460.634, -476.809, 464.195, -476.809, 474.876, -475.017, 477.992, -462.469, 481.107, -461.125, 491.343, -459.332, 494.014, -445.44, 506.92, -443.648, 507.365, -416.76, 509.591, -413.175, 514.041, -413.175, 522.942, -411.382, 523.833, -384.047, 525.168, -381.806, 527.838, -380.462, 539.41, -379.565, 539.855, -336.545, 541.635, -332.512, 544.75, -331.615, 554.542, -331.167, 557.212, -283.666, 571.009, -283.218, 572.344, -236.164, 582.135, -236.164, 585.25, -233.923, 587.031, -230.338, 587.476, -210.173, 587.921, -203.451, 593.261, -202.554, 602.163, -202.554, 602.163, -177.011, 604.388, -171.633, 607.503, -170.737, 617.295, -169.841, 618.185, -21.5102, 589.701, -20.6139, 587.921, -18.8214, 587.031, 74.3894, 575.904, 76.6301, 572.789, 76.6301, 572.789, 78.8707, 572.344, 100.381, 570.119, 106.655, 564.778, 107.999, 557.212, 108.895, 555.432, 113.825, 555.877, 126.821, 554.096, 138.024, 545.195, 139.368, 529.618, 138.92, 524.278, 138.92, 522.942, 143.849, 522.942, 153.26, 522.497, 179.252, 520.717, 186.422, 512.261, 186.87, 507.365, 187.318, 506.92, 192.695, 506.03, 205.691, 506.03, 216.446, 502.025, 218.239, 491.343, 220.928, 490.898, 246.471, 486.003, 250.056, 475.766, 252.745, 471.761, 264.844, 460.189, 267.085, 444.612, 267.085, 442.387, 271.566, 438.827, 278.736, 332.013, 280.977, 329.788, 288.147, 321.776, 296.213, 257.688, 295.765, 250.567, 300.246, 247.897, 313.242, 234.1, 312.346, 230.095, 327.582, 169.122, 327.134, 169.122, 312.794, 121.056, 312.794, 121.056, 298.902, 56.0772, 297.558, 56.5223, 281.873, 40.5002, 280.977, 39.1651, 266.189, 8.45609, 265.292, 9.3462, 248.712, -41.3903, 248.712, -42.2805, 232.579, -71.6542, 233.027, -119.275, 232.579, -119.275, 216.894, -184.254, 215.998, -185.144, 203.451, -200.276, 199.866, -203.391, 185.525, -215.408, 185.077, -215.853, 160.878, -219.413, 153.26, -231.875, 150.123, -234.1, 137.127, -247.897, 135.335, -251.457, 121.443, -264.809, 120.547, -266.589, 106.207, -279.941, 103.07, -279.941, 86.0408, -295.073, 86.0408, -297.298, 72.1488, -326.227, 70.8044, -327.117, 54.2236, -344.919, 54.2236, -342.249, 2.24064, -343.584, -22.4065, -327.562, -23.7508, -328.452, -78.4226, -326.227, -103.518, -311.095, -103.966, -311.985, -184.181, -295.073, -185.077, -294.628, -228.994, -294.183, -246.471)])
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vcnes"]
-texture = ExtResource("1_chaov")
+texture = ExtResource("1_vplc7")
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
@@ -26,7 +27,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_vcnes")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uj1pa"]
-texture = ExtResource("2_o0rcv")
+texture = ExtResource("2_p5c1a")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -6, 0, -6, 0, -6, -4, -4, -6, 0, -6, 8, -8, 8)
 1:0/0 = 0
@@ -136,7 +137,7 @@ texture = ExtResource("2_o0rcv")
 8:6/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nujma"]
-texture = ExtResource("3_nm8qd")
+texture = ExtResource("3_vruis")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -151,7 +152,7 @@ texture = ExtResource("3_nm8qd")
 1:2/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nm8qd"]
-texture = ExtResource("4_chaov")
+texture = ExtResource("4_xrxow")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -205,7 +206,7 @@ sources/1 = SubResource("TileSetAtlasSource_nujma")
 sources/2 = SubResource("TileSetAtlasSource_nm8qd")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ux455"]
-texture = ExtResource("3_nm8qd")
+texture = ExtResource("3_vruis")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -226,7 +227,7 @@ sources/0 = SubResource("TileSetAtlasSource_ux455")
 size = Vector2(20, 232)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aq45b"]
-texture = ExtResource("4_chaov")
+texture = ExtResource("4_xrxow")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -327,7 +328,7 @@ tile_set = SubResource("TileSet_jukch")
 [node name="NewPiskel(10)" type="Sprite2D" parent="Flowers"]
 position = Vector2(297, -758)
 scale = Vector2(0.67999, 0.67999)
-texture = ExtResource("5_o0rcv")
+texture = ExtResource("5_k2xpx")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="Flowers/NewPiskel(10)"]
 position = Vector2(-91.1921, 306.76)
@@ -339,16 +340,29 @@ shape = SubResource("CapsuleShape2D_aq45b")
 
 [node name="AllMobs" type="Node2D" parent="."]
 
-[node name="Player" parent="AllMobs" instance=ExtResource("4_aq45b")]
+[node name="Player" parent="AllMobs" instance=ExtResource("6_bty1o")]
 position = Vector2(209, -122)
 scale = Vector2(0.476089, 0.476089)
 
-[node name="HUD" parent="AllMobs/Player" instance=ExtResource("5_jukch")]
+[node name="HUD" parent="AllMobs/Player" instance=ExtResource("7_s1bpp")]
 
-[node name="Enemy(Multi-hit)" parent="AllMobs" instance=ExtResource("7_nm8qd")]
-position = Vector2(-179, 55)
-scale = Vector2(0.6, 0.6)
+[node name="Node2D" parent="." instance=ExtResource("8_h1lj6")]
+position = Vector2(-227, 475)
 
-[node name="Enemy(Multi-hit)2" parent="AllMobs" instance=ExtResource("7_nm8qd")]
-position = Vector2(616, 209)
-scale = Vector2(0.6, 0.6)
+[node name="Node2D2" parent="." instance=ExtResource("8_h1lj6")]
+position = Vector2(432, 651)
+
+[node name="Node2D3" parent="." instance=ExtResource("8_h1lj6")]
+position = Vector2(1041, 475)
+
+[node name="Node2D4" parent="." instance=ExtResource("8_h1lj6")]
+position = Vector2(1236, 96)
+
+[node name="Node2D5" parent="." instance=ExtResource("8_h1lj6")]
+position = Vector2(1236, -381)
+
+[node name="Node2D6" parent="." instance=ExtResource("8_h1lj6")]
+position = Vector2(-619, -350)
+
+[node name="MultiHitSpawer" parent="." instance=ExtResource("9_kt7k4")]
+position = Vector2(344, -257)

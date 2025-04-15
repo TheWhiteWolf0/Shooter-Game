@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://blmvkqgqq08j"]
+
+[ext_resource type="Script" uid="uid://q7ppba10bqk3" path="res://Scripts/multi_hit_spawer.gd" id="1_nqtfo"]
+
+[node name="MultiHitSpawer" type="Node2D"]
+script = ExtResource("1_nqtfo")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="SpawnPoint" type="Marker2D" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
