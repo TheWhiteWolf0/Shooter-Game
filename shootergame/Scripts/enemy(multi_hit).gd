@@ -13,7 +13,7 @@ extends CharacterBody2D
 
 var tree_death = preload("res://Scenes/animated_sprite_2d.tscn")
 
-const SPEED = 50
+var enemy_speed = 50
 var enemy_health:int = 3
 #var enemy_increase_bool:bool = false
 
@@ -29,7 +29,7 @@ func _physics_process(delta: float) -> void:
 	#and target_to_chase.global_position == navigation_agent_2d.target_position:
 	#	return
 	navigation_agent_2d.target_position = target_to_chase.global_position
-	velocity = global_position.direction_to(navigation_agent_2d.get_next_path_position()) * SPEED
+	velocity = global_position.direction_to(navigation_agent_2d.get_next_path_position()) * enemy_speed
 	move_and_slide()
 	enemydeath()
 
@@ -60,4 +60,5 @@ func enemydeath():
 
 func _on_health__speed_increase_timeout() -> void:
 	enemy_health = GlobalVariables.enemy_health_increase + enemy_health
+	enemy_speed = GlobalVariables.enemy_Speed_increase + enemy_speed
 	print(enemy_health)
