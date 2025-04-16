@@ -12,10 +12,8 @@ extends Node
 @export var player_speed = 450
 var player_Score:int = 0
 var player_Health:int = 100
-var player_Damage:int = 5
+var player_Damage:int = 1
 var player_lvl:int = 0
-
-var player_pos
 
 var Can_Fire:bool = true
 var Can_reload:bool = false
@@ -35,4 +33,4 @@ var Currency:int = 0
 
 # Enemy Multi-Hit health # 
 
-var enemy_health:int = 15
+var enemy_health:int = 3
