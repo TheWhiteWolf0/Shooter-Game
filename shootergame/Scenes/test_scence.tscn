@@ -148,6 +148,11 @@ position = Vector2(-1316.29, 287.19)
 scale = Vector2(1.99438, 1.99438)
 collision_layer = 2
 
+[node name="Enemy(Multi-hit)2" parent="AllMobs" instance=ExtResource("8_2dkxq")]
+position = Vector2(-1914.6, 283.201)
+scale = Vector2(1.99438, 1.99438)
+collision_layer = 2
+
 [node name="HealthPacks" type="Node2D" parent="."]
 
 [node name="MedKit" parent="HealthPacks" instance=ExtResource("5_iph1d")]

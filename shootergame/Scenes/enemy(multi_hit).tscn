@@ -69,4 +69,10 @@ shape = SubResource("CircleShape2D_ntxh7")
 scale = Vector2(1.52424, 1.52424)
 shape = SubResource("CapsuleShape2D_ntxh7")
 
+[node name="Health + Speed Increase" type="Timer" parent="."]
+process_callback = 0
+wait_time = 15.0
+autostart = true
+
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="timeout" from="Health + Speed Increase" to="." method="_on_health__speed_increase_timeout"]

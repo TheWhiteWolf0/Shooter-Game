@@ -341,7 +341,7 @@ shape = SubResource("CapsuleShape2D_aq45b")
 [node name="AllMobs" type="Node2D" parent="."]
 
 [node name="Player" parent="AllMobs" instance=ExtResource("6_bty1o")]
-position = Vector2(209, -122)
+position = Vector2(576, -1606)
 scale = Vector2(0.476089, 0.476089)
 
 [node name="HUD" parent="AllMobs/Player" instance=ExtResource("7_s1bpp")]

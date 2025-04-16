@@ -14,7 +14,8 @@ extends CharacterBody2D
 var tree_death = preload("res://Scenes/animated_sprite_2d.tscn")
 
 const SPEED = 50
-#var enemy_health:int = 15
+var enemy_health:int = 3
+#var enemy_increase_bool:bool = false
 
 #func _ready() -> void:
 	#set_physics_process(false)
@@ -34,11 +35,11 @@ func _physics_process(delta: float) -> void:
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	print("enemy hit")
-	GlobalVariables.enemy_health = GlobalVariables.enemy_health - GlobalVariables.player_Damage
+	enemy_health = enemy_health - GlobalVariables.player_Damage
 	pass # Replace with function body.
 	
 func enemydeath():
-	if GlobalVariables.enemy_health <= 0:
+	if enemy_health <= 0:
 		GlobalVariables.Currency = GlobalVariables.Currency + 5
 		GlobalVariables.player_Score = GlobalVariables.player_Score + 3
 		GlobalVariables.reserve_ammo = GlobalVariables.reserve_ammo + 5
@@ -47,5 +48,16 @@ func enemydeath():
 		get_tree().get_root().call_deferred("add_child", tree_instance)
 		queue_free()
 		
-func HealthIncrease():
-	print("Must Do/Figure out the math")
+#func HealthIncrease():
+	#if GlobalVariables.player_Score > 5:
+		#enemy_increase_bool = true
+	
+	#if enemy_increase_bool:
+		#enemy_health = GlobalVariables.enemy_health_increase + enemy_health
+		#enemy_increase_bool = false
+		#print(enemy_health)
+
+
+func _on_health__speed_increase_timeout() -> void:
+	enemy_health = GlobalVariables.enemy_health_increase + enemy_health
+	print(enemy_health)
