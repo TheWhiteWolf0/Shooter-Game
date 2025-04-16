@@ -365,4 +365,13 @@ position = Vector2(1236, -381)
 position = Vector2(-619, -350)
 
 [node name="MultiHitSpawer" parent="." instance=ExtResource("9_kt7k4")]
-position = Vector2(344, -257)
+position = Vector2(-78, -960)
+
+[node name="MultiHitSpawer2" parent="." instance=ExtResource("9_kt7k4")]
+position = Vector2(1041, -986)
+
+[node name="MultiHitSpawer3" parent="." instance=ExtResource("9_kt7k4")]
+position = Vector2(-371, 332)
+
+[node name="MultiHitSpawer4" parent="." instance=ExtResource("9_kt7k4")]
+position = Vector2(1041, 377)

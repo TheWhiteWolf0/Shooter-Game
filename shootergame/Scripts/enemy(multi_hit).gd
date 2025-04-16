@@ -39,8 +39,9 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 	
 func enemydeath():
 	if enemy_health <= 0:
-		GlobalVariables.Currency = GlobalVariables.Currency + 1
-		GlobalVariables.player_Score = GlobalVariables.player_Score + 1
+		GlobalVariables.Currency = GlobalVariables.Currency + 5
+		GlobalVariables.player_Score = GlobalVariables.player_Score + 3
+		GlobalVariables.reserve_ammo = GlobalVariables.reserve_ammo + 5
 		var tree_instance = tree_death.instantiate()
 		tree_instance.global_position = $Area2D.global_position
 		get_tree().get_root().call_deferred("add_child", tree_instance)
