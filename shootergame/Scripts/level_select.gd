@@ -6,12 +6,12 @@ extends Control
 
 
 func _on_level_1_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/test_scence.tscn")
+	get_tree().change_scene_to_file("res://Scenes/level_1.tscn")
 	pass # Replace with function body.
 	
 func _on_level_2_pressed() -> void:
 	# add and make level 2 #
-	##get_tree().change_scene_to_file()
+	get_tree().change_scene_to_file("res://Scenes/lvl2.tscn")
 	pass # Replace with function body.
 
 func _on_level_3_pressed() -> void:

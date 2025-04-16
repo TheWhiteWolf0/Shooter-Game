@@ -34,4 +34,4 @@ var Currency:int = 0
 # Enemy Multi-Hit health # 
 
 var enemy_health_increase:int = 2
-var enemy_Speed_increase:int = 5
+var enemy_Speed_increase:int = 10
