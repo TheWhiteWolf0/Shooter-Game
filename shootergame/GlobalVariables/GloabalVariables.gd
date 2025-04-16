@@ -31,4 +31,8 @@ var reserve_ammo:int = 40
 var damage_Overtime:bool = false
 var damage_OT_Fire:float = 0.0
 
-var Currency:int = 10000
+var Currency:int = 0
+
+# Enemy Multi-Hit health # 
+
+var enemy_health:int = 15

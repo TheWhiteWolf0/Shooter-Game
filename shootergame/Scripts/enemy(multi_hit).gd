@@ -14,7 +14,7 @@ extends CharacterBody2D
 var tree_death = preload("res://Scenes/animated_sprite_2d.tscn")
 
 const SPEED = 50
-var enemy_health:int = 15
+#var enemy_health:int = 15
 
 #func _ready() -> void:
 	#set_physics_process(false)
@@ -34,11 +34,11 @@ func _physics_process(delta: float) -> void:
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	print("enemy hit")
-	enemy_health = enemy_health - GlobalVariables.player_Damage
+	GlobalVariables.enemy_health = GlobalVariables.enemy_health - GlobalVariables.player_Damage
 	pass # Replace with function body.
 	
 func enemydeath():
-	if enemy_health <= 0:
+	if GlobalVariables.enemy_health <= 0:
 		GlobalVariables.Currency = GlobalVariables.Currency + 5
 		GlobalVariables.player_Score = GlobalVariables.player_Score + 3
 		GlobalVariables.reserve_ammo = GlobalVariables.reserve_ammo + 5
@@ -46,3 +46,6 @@ func enemydeath():
 		tree_instance.global_position = $Area2D.global_position
 		get_tree().get_root().call_deferred("add_child", tree_instance)
 		queue_free()
+		
+func HealthIncrease():
+	print("Must Do/Figure out the math")
