@@ -35,3 +35,7 @@ var Currency:int = 0
 
 var enemy_health_increase:int = 2
 var enemy_Speed_increase:int = 10
+
+# Upgrades #
+
+var cost:int = 5
