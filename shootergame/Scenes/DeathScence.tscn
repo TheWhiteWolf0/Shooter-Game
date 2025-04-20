@@ -23,12 +23,31 @@ texture = ExtResource("1_o10et")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="score" type="Label" parent="CanvasLayer"]
-offset_left = 283.0
-offset_top = 236.0
-offset_right = 400.0
-offset_bottom = 259.0
+offset_left = 1.00003
+offset_top = 1.52588e-05
+offset_right = 118.0
+offset_bottom = 23.0
 scale = Vector2(3.56, 3.56)
 text = "Score Achivied "
 label_settings = SubResource("LabelSettings_kedjp")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+offset_left = 640.0
+offset_top = 384.0
+offset_right = 739.0
+offset_bottom = 415.0
+scale = Vector2(3.03331, 2.05362)
+text = "Level Select"
+
+[node name="Button2" type="Button" parent="CanvasLayer"]
+offset_left = 216.0
+offset_top = 384.0
+offset_right = 368.0
+offset_bottom = 415.0
+scale = Vector2(1.96, 1.96)
+text = "play Again/ Reload"
+
+[connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Button2" to="." method="_on_button_2_pressed"]
