@@ -17,7 +17,7 @@ extends CharacterBody2D
 
 var tree_death = preload("res://Scenes/animated_sprite_2d.tscn")
 
-const SPEED = 75
+var SPEED = 75
 
 #func _ready() -> void:
 	#set_physics_process(false)
@@ -43,4 +43,8 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 	tree_instance.global_position = $Area2D.global_position
 	get_tree().get_root().call_deferred("add_child", tree_instance)
 	queue_free()
+	pass # Replace with function body.
+
+func _on_speed_increase_timeout() -> void:
+	SPEED = GlobalVariables.enemy_Speed_increase + SPEED
 	pass # Replace with function body.

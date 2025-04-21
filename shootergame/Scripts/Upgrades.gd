@@ -24,16 +24,16 @@ func _on_button_pressed() -> void:
 		print("Insufficient funds")
 	pass # Replace with function body.
 
-func _on_player_health_pressed() -> void:
-	if GlobalVariables.Currency >= GlobalVariables.cost:
-		GlobalVariables.Currency = GlobalVariables.Currency - GlobalVariables.cost
-		GlobalVariables.player_Health = GlobalVariables.player_Health + 10
-		GlobalVariables.cost =  + 2
-		GlobalVariables.player_lvl = GlobalVariables.player_lvl + 1
-		print(GlobalVariables.cost)
-	else:
-		print("Insufficient funds")
-	pass # Replace with function body.
+#func _on_player_health_pressed() -> void:
+#	if GlobalVariables.Currency >= GlobalVariables.cost:
+#		GlobalVariables.Currency = GlobalVariables.Currency - GlobalVariables.cost
+#		GlobalVariables.player_Health = GlobalVariables.player_Health + 10
+#		GlobalVariables.cost =  + 2
+#		GlobalVariables.player_lvl = GlobalVariables.player_lvl + 1
+#		print(GlobalVariables.cost)
+#	else:
+#		print("Insufficient funds")
+#	pass # Replace with function body.
 
 func _on_player_damage_pressed() -> void:
 	if GlobalVariables.Currency >= GlobalVariables.cost:
@@ -56,7 +56,15 @@ func _on_reserve_ammo_pressed() -> void:
 		print("Reerve ammo +10")
 	else:
 		print("Insufficient funds")
-	
+	pass # Replace with function body.
+
+func _on_speed_increase_pressed() -> void:
+	if GlobalVariables.Currency >= GlobalVariables.cost:
+		GlobalVariables.Currency = GlobalVariables.Currency - GlobalVariables.cost
+		GlobalVariables.player_speed = GlobalVariables.player_speed + 50
+		GlobalVariables.player_lvl = GlobalVariables.player_lvl + 1
+	else:
+		print("Insufficient funds")
 	pass # Replace with function body.
 
 

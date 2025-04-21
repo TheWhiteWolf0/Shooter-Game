@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://d3ue64ipi726e" path="res://Sprite Frames/New Piskel (3).png" id="2_d570n"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5476s"]
-radius = 69.9811
+radius = 56.0647
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5476s"]
 atlas = ExtResource("2_d570n")
@@ -43,7 +43,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_d570n"]
-radius = 64.3168
+radius = 67.9261
 
 [node name="EnemyChase" type="CharacterBody2D"]
 scale = Vector2(0.50141, 0.50141)
@@ -69,4 +69,9 @@ position = Vector2(-4.39834e-06, 3.4795e-06)
 scale = Vector2(0.999998, 0.999998)
 shape = SubResource("CircleShape2D_d570n")
 
+[node name="SpeedIncrease" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
+
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="timeout" from="SpeedIncrease" to="." method="_on_speed_increase_timeout"]

@@ -23,10 +23,10 @@ texture = ExtResource("1_o10et")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="score" type="Label" parent="CanvasLayer"]
-offset_left = 1.00003
-offset_top = 1.52588e-05
-offset_right = 118.0
-offset_bottom = 23.0
+offset_left = 384.0
+offset_top = 240.0
+offset_right = 501.0
+offset_bottom = 263.0
 scale = Vector2(3.56, 3.56)
 text = "Score Achivied "
 label_settings = SubResource("LabelSettings_kedjp")

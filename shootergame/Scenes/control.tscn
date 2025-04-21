@@ -19,7 +19,16 @@ offset_right = 189.0
 offset_bottom = 95.0
 text = "Mag Increase"
 
+[node name="SpeedIncrease" type="Button" parent="."]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 99.0
+offset_right = 189.0
+offset_bottom = 133.0
+text = "Speed"
+
 [node name="PlayerHealth" type="Button" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 2.0
 offset_top = 99.0
@@ -54,34 +63,30 @@ text = "Back"
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="BloodEchoes" type="Label" parent="CanvasLayer"]
-offset_left = 3.0
-offset_top = 200.0
-offset_right = 110.0
-offset_bottom = 224.0
+offset_top = 192.0
+offset_right = 107.0
+offset_bottom = 216.0
 text = "BloodEchoes: "
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Score" type="Label" parent="CanvasLayer"]
-offset_left = 5.0
-offset_top = 226.0
-offset_right = 57.0
-offset_bottom = 249.0
+offset_top = 216.0
+offset_right = 52.0
+offset_bottom = 239.0
 text = "Score: "
 metadata/_edit_use_anchors_ = true
 
 [node name="Cost" type="Label" parent="CanvasLayer"]
-offset_left = 4.0
-offset_top = 252.0
-offset_right = 44.0
-offset_bottom = 275.0
+offset_top = 240.0
+offset_right = 40.0
+offset_bottom = 263.0
 text = "Cost:"
 
 [node name="PlayerLevel" type="Label" parent="CanvasLayer"]
-offset_left = 11.0
-offset_top = 276.0
-offset_right = 100.0
-offset_bottom = 299.0
+offset_top = 264.0
+offset_right = 93.0
+offset_bottom = 287.0
 text = "Player level:"
 
 [node name="Damage" type="Label" parent="CanvasLayer"]
@@ -99,6 +104,7 @@ offset_right = 134.0
 offset_bottom = 22.0
 
 [node name="Health" type="Label" parent="CanvasLayer"]
+visible = false
 offset_left = 199.0
 offset_top = 101.0
 offset_right = 259.0
@@ -106,6 +112,7 @@ offset_bottom = 124.0
 text = "Health: "
 
 [node name="PlayerHealth + Increase" type="Label" parent="CanvasLayer/Health"]
+visible = false
 layout_mode = 0
 offset_left = 90.0
 offset_top = 2.0
@@ -127,6 +134,7 @@ offset_right = 156.0
 offset_bottom = 24.0
 
 [connection signal="pressed" from="MagIncrease" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="SpeedIncrease" to="." method="_on_speed_increase_pressed"]
 [connection signal="pressed" from="PlayerHealth" to="." method="_on_player_health_pressed"]
 [connection signal="pressed" from="PlayerDamage" to="." method="_on_player_damage_pressed"]
 [connection signal="pressed" from="ReserveAmmo" to="." method="_on_reserve_ammo_pressed"]
