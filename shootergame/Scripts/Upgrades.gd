@@ -61,7 +61,7 @@ func _on_reserve_ammo_pressed() -> void:
 func _on_speed_increase_pressed() -> void:
 	if GlobalVariables.Currency >= GlobalVariables.cost:
 		GlobalVariables.Currency = GlobalVariables.Currency - GlobalVariables.cost
-		GlobalVariables.player_speed = GlobalVariables.player_speed + 50
+		GlobalVariables.player_speed = GlobalVariables.player_speed + 25
 		GlobalVariables.player_lvl = GlobalVariables.player_lvl + 1
 	else:
 		print("Insufficient funds")

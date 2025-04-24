@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://n5q48eoj5nb5"]
+[gd_scene load_steps=3 format=3 uid="uid://n5q48eoj5nb5"]
 
 [ext_resource type="Script" uid="uid://6wevlv4roey7" path="res://Scripts/level_select.gd" id="1_rp7yy"]
+[ext_resource type="Texture2D" uid="uid://cfn4an3odfido" path="res://Sprite Frames/pixelForrest.jpg" id="2_nkys2"]
 
 [node name="LevelSelect" type="Control"]
 layout_mode = 3
@@ -11,48 +12,36 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_rp7yy")
 
+[node name="PixelForrest" type="Sprite2D" parent="."]
+position = Vector2(578, 326)
+scale = Vector2(1.8, 1.8)
+texture = ExtResource("2_nkys2")
+
 [node name="Level1" type="Button" parent="."]
 layout_mode = 0
-offset_left = 284.0
-offset_top = 283.0
-offset_right = 366.0
-offset_bottom = 314.0
-text = "Level 1"
+offset_left = 192.0
+offset_top = 192.0
+offset_right = 276.0
+offset_bottom = 223.0
+scale = Vector2(3.80427, 3.21455)
+text = "Intro"
 
 [node name="Level2" type="Button" parent="."]
 layout_mode = 0
-offset_left = 560.0
-offset_top = 287.0
-offset_right = 622.0
-offset_bottom = 318.0
-text = "Level 2"
-
-[node name="Level3" type="Button" parent="."]
-layout_mode = 0
-offset_left = 813.0
-offset_top = 295.0
-offset_right = 875.0
-offset_bottom = 326.0
-text = "Level 3"
+offset_left = 640.0
+offset_top = 192.0
+offset_right = 960.0
+offset_bottom = 292.0
+text = "Main Level"
 
 [node name="Upgrades" type="Button" parent="."]
 layout_mode = 0
-offset_left = 550.0
-offset_top = 498.0
-offset_right = 632.0
-offset_bottom = 529.0
+offset_left = 416.0
+offset_top = 384.0
+offset_right = 736.0
+offset_bottom = 484.0
 text = "Upgrades"
-
-[node name="Options" type="Button" parent="."]
-layout_mode = 0
-offset_left = 1075.0
-offset_top = 7.0
-offset_right = 1145.0
-offset_bottom = 38.0
-text = "Options"
 
 [connection signal="pressed" from="Level1" to="." method="_on_level_1_pressed"]
 [connection signal="pressed" from="Level2" to="." method="_on_level_2_pressed"]
-[connection signal="pressed" from="Level3" to="." method="_on_level_3_pressed"]
 [connection signal="pressed" from="Upgrades" to="." method="_on_upgrades_pressed"]
-[connection signal="pressed" from="Options" to="." method="_on_options_pressed"]

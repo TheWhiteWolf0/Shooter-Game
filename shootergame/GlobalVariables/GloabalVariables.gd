@@ -38,4 +38,4 @@ var enemy_Speed_increase:int = 10
 
 # Upgrades #
 
-var cost:int = 5
+var cost:int = 20
