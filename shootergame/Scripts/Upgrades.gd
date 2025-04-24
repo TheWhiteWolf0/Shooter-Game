@@ -73,7 +73,7 @@ func _on_back_pressed() -> void:
 	pass # Replace with function body.
 
 func _physics_process(delta: float) -> void:
-	$CanvasLayer/BloodEchoes.text = "BloodEchoes: " + str(GlobalVariables.Currency)
+	$CanvasLayer/BloodEchoes.text = "Power: " + str(GlobalVariables.Currency)
 	$CanvasLayer/Score.text = "Score: " + str(GlobalVariables.player_Score)
 	$CanvasLayer/Cost.text = "Cost: " + str(GlobalVariables.cost)
 	$CanvasLayer/PlayerLevel.text = "Level: " + str(GlobalVariables.player_lvl)
@@ -85,3 +85,6 @@ func _physics_process(delta: float) -> void:
 	
 	$CanvasLayer/MagSize.text = "MagCapicity: " + str(GlobalVariables.mag_Capacity)
 	$"CanvasLayer/MagSize/MagSize + increase".text = "--> " + str(GlobalVariables.mag_Capacity + 1)
+	
+	$CanvasLayer/PlayerSpeed.text = "Speed:" + str(GlobalVariables.player_speed)
+	$"CanvasLayer/PlayerSpeed/PlayerSpeed + increase".text = "--> " + str(GlobalVariables.player_speed + 25)

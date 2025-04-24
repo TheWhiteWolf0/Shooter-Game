@@ -63,30 +63,33 @@ text = "Back"
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="BloodEchoes" type="Label" parent="CanvasLayer"]
-offset_top = 192.0
-offset_right = 107.0
-offset_bottom = 216.0
+offset_left = 3.0
+offset_top = 279.0
+offset_right = 110.0
+offset_bottom = 303.0
 text = "Power: "
-horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Score" type="Label" parent="CanvasLayer"]
-offset_top = 216.0
-offset_right = 52.0
-offset_bottom = 239.0
+visible = false
+offset_left = 4.0
+offset_top = 298.0
+offset_right = 56.0
+offset_bottom = 321.0
 text = "Score: "
-metadata/_edit_use_anchors_ = true
 
 [node name="Cost" type="Label" parent="CanvasLayer"]
-offset_top = 240.0
-offset_right = 40.0
-offset_bottom = 263.0
+offset_left = 4.0
+offset_top = 322.0
+offset_right = 44.0
+offset_bottom = 345.0
 text = "Cost:"
 
 [node name="PlayerLevel" type="Label" parent="CanvasLayer"]
-offset_top = 264.0
-offset_right = 93.0
-offset_bottom = 287.0
+offset_left = 4.0
+offset_top = 346.0
+offset_right = 97.0
+offset_bottom = 369.0
 text = "Player level:"
 
 [node name="Damage" type="Label" parent="CanvasLayer"]
@@ -131,6 +134,20 @@ layout_mode = 0
 offset_left = 116.0
 offset_top = 1.0
 offset_right = 156.0
+offset_bottom = 24.0
+
+[node name="PlayerSpeed" type="Label" parent="CanvasLayer"]
+offset_left = 197.0
+offset_top = 105.0
+offset_right = 249.0
+offset_bottom = 128.0
+text = "Speed:"
+
+[node name="PlayerSpeed + increase" type="Label" parent="CanvasLayer/PlayerSpeed"]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 1.0
+offset_right = 121.0
 offset_bottom = 24.0
 
 [connection signal="pressed" from="MagIncrease" to="." method="_on_button_pressed"]
