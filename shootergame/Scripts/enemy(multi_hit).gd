@@ -12,6 +12,10 @@ extends CharacterBody2D
 @onready var target_to_chase: CharacterBody2D = get_parent().get_node("Player")
 
 var tree_death = preload("res://Scenes/animated_sprite_2d.tscn")
+var Health_death = preload("res://Scenes/MedKits.tscn")
+
+var score_check = false
+var score_health
 
 var enemy_speed = 50
 var enemy_health:int = 3
@@ -32,6 +36,8 @@ func _physics_process(delta: float) -> void:
 	velocity = global_position.direction_to(navigation_agent_2d.get_next_path_position()) * enemy_speed
 	move_and_slide()
 	enemydeath()
+	#_score_check()
+	#_on_health__speed_increase_timeout()
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	print("enemy hit")
@@ -62,3 +68,11 @@ func _on_health__speed_increase_timeout() -> void:
 	enemy_health = GlobalVariables.enemy_health_increase + enemy_health
 	enemy_speed = GlobalVariables.enemy_Speed_increase + enemy_speed
 	print(enemy_health)
+
+func _score_check():
+	score_check = GlobalVariables.player_Score / 100
+	if score_check == 0:
+		var health_instance = Health_death.instantiate()
+		health_instance.global_position = $Area2D.global_position
+		get_tree().get_root().call_deferred("add_child", health_instance)
+		queue_free()
