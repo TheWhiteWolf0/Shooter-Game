@@ -6,7 +6,7 @@
 script = ExtResource("1_wtcfe")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 15.0
+wait_time = 7.0
 autostart = true
 
 [node name="SpawnPoint" type="Marker2D" parent="."]

@@ -34,13 +34,15 @@ func player_weapon():
 		reload_delay == true
 		if reload_delay == true:
 			_on_timer_timeout()
+			
+		
 	return
 
 func _physics_process(delta):
 	get_input()
 	move_and_slide()
 	player_weapon()
-	#upgrade()
+	upgrade()
 	death()
 
 func fire():
@@ -52,7 +54,7 @@ func fire():
 
 func upgrade():
 	if Input.is_action_just_pressed("Inventory"):
-		get_tree().change_scene_to_file("res://Scenes/control.tscn")
+		get_tree().change_scene_to_file("res://Scenes/level_select.tscn")
 
 func death():
 	if GlobalVariables.player_Health <= 0:

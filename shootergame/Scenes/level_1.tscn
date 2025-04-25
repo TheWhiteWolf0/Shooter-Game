@@ -469,5 +469,6 @@ offset_bottom = 43.8995
 scale = Vector2(0.272727, 0.272727)
 text = "Kill the Evil seeds to re-plant the trees
 Use their power as your own
-Go forth the forest needs you!!!"
+Go forth the forest needs you!!!
+(press i)"
 label_settings = SubResource("LabelSettings_xrdnt")

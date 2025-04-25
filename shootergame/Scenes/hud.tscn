@@ -336,10 +336,10 @@ script = ExtResource("1_e0onf")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="mag_ammo" type="Label" parent="CanvasLayer"]
-offset_left = 1088.0
-offset_top = 592.0
-offset_right = 1181.0
-offset_bottom = 615.0
+offset_left = 1061.51
+offset_top = 593.512
+offset_right = 1154.51
+offset_bottom = 616.512
 scale = Vector2(2.16, 2.16)
 label_settings = SubResource("LabelSettings_bjfho")
 metadata/_edit_use_anchors_ = true
@@ -347,9 +347,9 @@ metadata/_edit_use_anchors_ = true
 [node name="reserve_ammo" type="Label" parent="CanvasLayer"]
 anchors_preset = -1
 anchor_bottom = 0.00462963
-offset_left = 1120.0
+offset_left = 1098.56
 offset_top = 544.0
-offset_right = 1241.0
+offset_right = 1219.56
 offset_bottom = 567.0
 scale = Vector2(1.76, 2.48)
 text = "ReserveAmmo: "
@@ -395,13 +395,13 @@ sprite_frames = SubResource("SpriteFrames_5ep0j")
 autoplay = "default"
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="CanvasLayer"]
-position = Vector2(1056, 620)
+position = Vector2(1029.51, 621.512)
 scale = Vector2(2.34448, 2.34448)
 sprite_frames = SubResource("SpriteFrames_ba8gd")
 autoplay = "default"
 
 [node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="CanvasLayer"]
-position = Vector2(1080, 580)
+position = Vector2(1058.56, 580)
 scale = Vector2(2.16, 2.16)
 sprite_frames = SubResource("SpriteFrames_0iicw")
 autoplay = "default"
