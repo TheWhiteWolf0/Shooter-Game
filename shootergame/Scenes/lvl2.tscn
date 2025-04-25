@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://c0168coakp6ft"]
+[gd_scene load_steps=24 format=4 uid="uid://c0168coakp6ft"]
 
 [ext_resource type="Texture2D" uid="uid://btlskccr8rifn" path="res://Sprout Lands - Sprites - Basic pack/Tilesets/Water.png" id="1_vplc7"]
 [ext_resource type="Texture2D" uid="uid://dringsv7csl7o" path="res://Sprout Lands - Sprites - Basic pack/Tilesets/Grass.png" id="2_p5c1a"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://d2noon1vftiyp" path="res://Scenes/Player.tscn" id="6_bty1o"]
 [ext_resource type="PackedScene" uid="uid://bjw3uvhgoe0aa" path="res://Scenes/hud.tscn" id="7_s1bpp"]
 [ext_resource type="PackedScene" uid="uid://b4uyylce6aqff" path="res://Scenes/node_2d.tscn" id="8_h1lj6"]
+[ext_resource type="PackedScene" uid="uid://cir25r22rf1w" path="res://Scenes/HealthPackSpawner.tscn" id="8_p5c1a"]
 [ext_resource type="PackedScene" uid="uid://blmvkqgqq08j" path="res://Scenes/multi_hit_spawer.tscn" id="9_kt7k4"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_aq45b"]
@@ -346,6 +347,10 @@ scale = Vector2(0.476089, 0.476089)
 
 [node name="HUD" parent="AllMobs/Player" instance=ExtResource("7_s1bpp")]
 
+[node name="Node2D7" parent="." instance=ExtResource("8_p5c1a")]
+position = Vector2(824, -1793)
+scale = Vector2(0.476089, 0.476089)
+
 [node name="Node2D" parent="." instance=ExtResource("8_h1lj6")]
 position = Vector2(-227, 475)
 
@@ -375,3 +380,6 @@ position = Vector2(-371, 332)
 
 [node name="MultiHitSpawer4" parent="." instance=ExtResource("9_kt7k4")]
 position = Vector2(1041, 377)
+
+[node name="Node2D8" parent="." instance=ExtResource("8_p5c1a")]
+position = Vector2(413, -1716)
