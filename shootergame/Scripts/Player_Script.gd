@@ -25,12 +25,14 @@ func player_weapon():
 		GlobalVariables.Can_reload = true
 	
 	if Input.is_action_just_pressed("Shoot") and GlobalVariables.Can_Fire and GlobalVariables.mag_ammo > 0:
+		$AudioStreamPlayer2D.play()
 		fire()
 		GlobalVariables.mag_ammo = GlobalVariables.mag_ammo - 1
 
 		
 	if Input.is_action_just_pressed("Reload") and GlobalVariables.Can_reload and GlobalVariables.reserve_ammo > 0 and GlobalVariables.mag_ammo == 0:
 		$ReloadDelay.start()
+		$AudioStreamPlayer2D2.play()
 		reload_delay == true
 		if reload_delay == true:
 			_on_timer_timeout()

@@ -1,7 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://d2noon1vftiyp"]
+[gd_scene load_steps=9 format=3 uid="uid://d2noon1vftiyp"]
 
 [ext_resource type="Script" uid="uid://b6tjlvlwgmbme" path="res://Scripts/Player_Script.gd" id="1_kyqiw"]
 [ext_resource type="Texture2D" uid="uid://cruvsxi4fnsq" path="res://Sprite Frames/New Piskel (7).png" id="2_kyqiw"]
+[ext_resource type="AudioStream" uid="uid://bsiapyuwmcksj" path="res://Audio/water-splash-102492.mp3" id="3_gntrk"]
+[ext_resource type="AudioStream" uid="uid://byv817mnc616h" path="res://Audio/water-191999.mp3" id="4_dewec"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gntrk"]
 atlas = ExtResource("2_kyqiw")
@@ -61,6 +63,14 @@ shape = SubResource("CircleShape2D_kyqiw")
 process_callback = 0
 wait_time = 0.25
 one_shot = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_gntrk")
+volume_db = -2.5
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_dewec")
+volume_db = -2.5
 
 [connection signal="area_entered" from="HitBox" to="." method="_on_hit_box_area_entered"]
 [connection signal="timeout" from="ReloadDelay" to="." method="_on_timer_timeout"]
