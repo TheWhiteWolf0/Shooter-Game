@@ -21,7 +21,7 @@ func _on_button_pressed() -> void:
 
 
 func _on_button_2_pressed() -> void:
-	GlobalVariables.player_Health = GlobalVariables.player_Health + 100
+	GlobalVariables.player_Health = + 100
 	GlobalVariables.reserve_ammo = GlobalVariables.reserve_ammo + 20
 	GlobalVariables.player_Score = 0
 	get_tree().change_scene_to_file("res://Scenes/lvl2.tscn")
