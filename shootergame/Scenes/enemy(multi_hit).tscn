@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://cwfkd43n5erxt"]
+[gd_scene load_steps=11 format=3 uid="uid://cwfkd43n5erxt"]
 
 [ext_resource type="Script" uid="uid://bchsehxah1bvh" path="res://Scripts/enemy(multi_hit).gd" id="1_ntxh7"]
 [ext_resource type="Texture2D" uid="uid://d3ue64ipi726e" path="res://Sprite Frames/New Piskel (3).png" id="2_ntxh7"]
+[ext_resource type="AudioStream" uid="uid://b8v47n2qgquta" path="res://Audio/enemyhit.wav" id="3_lj3yn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lj3yn"]
 atlas = ExtResource("2_ntxh7")
@@ -74,6 +75,9 @@ shape = SubResource("CapsuleShape2D_ntxh7")
 process_callback = 0
 wait_time = 7.0
 autostart = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_lj3yn")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="timeout" from="Health + Speed Increase" to="." method="_on_health__speed_increase_timeout"]

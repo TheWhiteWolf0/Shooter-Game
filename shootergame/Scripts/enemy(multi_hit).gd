@@ -41,11 +41,13 @@ func _physics_process(delta: float) -> void:
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	print("enemy hit")
+	#$AudioStreamPlayer2D.play()
 	enemy_health = enemy_health - GlobalVariables.player_Damage
 	pass # Replace with function body.
 	
 func enemydeath():
 	if enemy_health <= 0:
+		#$AudioStreamPlayer2D.play()
 		GlobalVariables.Currency = GlobalVariables.Currency + 5
 		GlobalVariables.player_Score = GlobalVariables.player_Score + 3
 		GlobalVariables.reserve_ammo = GlobalVariables.reserve_ammo + 5

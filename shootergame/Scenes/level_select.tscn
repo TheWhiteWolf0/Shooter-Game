@@ -20,18 +20,22 @@ texture = ExtResource("2_nkys2")
 [node name="Level1" type="Button" parent="."]
 layout_mode = 0
 offset_left = 192.0
-offset_top = 192.0
+offset_top = 216.0
 offset_right = 276.0
-offset_bottom = 223.0
+offset_bottom = 247.0
 scale = Vector2(3.80427, 3.21455)
+theme_override_colors/font_color = Color(0.219608, 0.682353, 0.815686, 1)
+theme_override_font_sizes/font_size = 0
 text = "Intro"
 
 [node name="Level2" type="Button" parent="."]
 layout_mode = 0
 offset_left = 640.0
-offset_top = 192.0
+offset_top = 216.0
 offset_right = 960.0
-offset_bottom = 292.0
+offset_bottom = 316.0
+theme_override_colors/font_color = Color(0.219608, 0.682353, 0.815686, 1)
+theme_override_font_sizes/font_size = 50
 text = "Main Level"
 
 [node name="Upgrades" type="Button" parent="."]
@@ -40,7 +44,21 @@ offset_left = 416.0
 offset_top = 384.0
 offset_right = 736.0
 offset_bottom = 484.0
+theme_override_colors/font_color = Color(0.219608, 0.682353, 0.815686, 1)
+theme_override_font_sizes/font_size = 50
 text = "Upgrades"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 32.0
+offset_right = 832.0
+offset_bottom = 127.0
+theme_override_colors/font_color = Color(0.121569, 0.807843, 0.278431, 0.807843)
+theme_override_font_sizes/font_size = 94
+text = "Kodama"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="Level1" to="." method="_on_level_1_pressed"]
 [connection signal="pressed" from="Level2" to="." method="_on_level_2_pressed"]
