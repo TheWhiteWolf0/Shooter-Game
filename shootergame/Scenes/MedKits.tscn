@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://p22sham85u4u"]
+[gd_scene load_steps=13 format=3 uid="uid://p22sham85u4u"]
 
 [ext_resource type="Script" uid="uid://drb6ldfxk4up8" path="res://Scripts/MedKit.gd" id="1_ixkmt"]
 [ext_resource type="Texture2D" uid="uid://bdeur75lfr2cm" path="res://Sprite Frames/New Piskel (5).png" id="2_ixkmt"]
+[ext_resource type="AudioStream" uid="uid://cq8gc1mrd13js" path="res://Audio/game-bonus-2-294436.mp3" id="3_jeyla"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vnixv"]
 size = Vector2(20, 19)
@@ -79,5 +80,8 @@ shape = SubResource("RectangleShape2D_vnixv")
 sprite_frames = SubResource("SpriteFrames_i7ewt")
 autoplay = "default"
 frame_progress = 0.931375
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_jeyla")
 
 [connection signal="body_entered" from="MedKit" to="MedKit" method="_on_body_entered"]

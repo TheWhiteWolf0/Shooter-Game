@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://c0168coakp6ft"]
+[gd_scene load_steps=27 format=4 uid="uid://c0168coakp6ft"]
 
 [ext_resource type="Texture2D" uid="uid://btlskccr8rifn" path="res://Sprout Lands - Sprites - Basic pack/Tilesets/Water.png" id="1_vplc7"]
 [ext_resource type="AudioStream" uid="uid://dn3le81d0feta" path="res://Audio/happy-relaxing-loop-275536.mp3" id="1_vruis"]
@@ -11,6 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://b4uyylce6aqff" path="res://Scenes/node_2d.tscn" id="8_h1lj6"]
 [ext_resource type="PackedScene" uid="uid://cir25r22rf1w" path="res://Scenes/HealthPackSpawner.tscn" id="8_p5c1a"]
 [ext_resource type="PackedScene" uid="uid://blmvkqgqq08j" path="res://Scenes/multi_hit_spawer.tscn" id="9_kt7k4"]
+[ext_resource type="PackedScene" uid="uid://bnglv4xn425t0" path="res://Scenes/ammo_pack.tscn" id="12_xrxow"]
+[ext_resource type="PackedScene" uid="uid://p22sham85u4u" path="res://Scenes/MedKits.tscn" id="13_k2xpx"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_aq45b"]
 vertices = PackedVector2Array(67.9688, -532.211, 67.2266, -542.953, 190.102, -542.57, 191, -511.039, -317.641, 44.2266, -334.391, 44.2266, -332.242, 2.21875, -317.406, -14.5625, -188.609, -373.852, -188.953, -381.797, -125.867, -382.68, 48.3203, 256.453, 18.9766, 255.594, 19.8906, 238.711, 435.703, -487.227, 451.508, -466.813, 301.523, -503.547, 301.523, -513.711, 355.563, -512.922, 419.008, -503.75, 225.438, -511.492, 225.438, -503.547, 4.90625, -445.203, 20.2266, -465.117, 36.1094, -482.711, 54.6406, -495.742, 35.6875, -495.281, 366.938, -522.281, 366.938, -529.461, 402.023, -529.172, 402.203, -527.109, 131.047, 289.109, 66.3594, 287.758, 66.7891, 272.438, 179.133, 302.797, 131.047, 302.797, -91.2266, -395.859, -91.6797, -414.648, -75.2969, -415.117, 254.844, 285.75, 222.391, 317.531, 179.133, 317.203, 226.531, 301.82, -76.2109, -430.313, -44.8828, -432.469, -71.7109, 223.008, -109.273, 222.672, -109.273, 207.031, -32.8203, 222.438, 562.617, -226.156, 577.117, -226.156, 577.492, -209.727, 607.352, -160.703, 608.133, -31.2031, 585.398, -30.4922, 605.641, -160.859, 403.906, -516.672, -333.07, -13.2422, 4.4375, -464.227, -243.57, 111.961, -257.523, 98.0469, -269.938, 76.0391, -300.977, -94.2734, -301.867, -174.688, -285.156, -175.594, -225.492, 128.156, -31.9297, 238.711, -44.0313, -445.656, -195.273, 175.813, -205.578, 175.43, -205.891, 158.57, -284.633, -228.727, -284.422, -236.789, -257.031, -237.703, 547.742, -273.961, 561.273, -273.523, 324.609, 271.133, 512.953, 153.094, 512.531, 176.828, 511.539, 176.891, -174.922, 206.117, -175.68, 195.406, 525.117, -370.641, 529.5, -370.289, 529.867, -334.391, -288.711, 62.5391, -316.719, 61.2266, 543.109, -321.688, 545.063, -321.594, 20.2266, -480.883, -239.227, -351.258, -237.531, -367.438, -210.406, -367.789, -318.438, -78.0781, -317.047, -93.7813, 596.992, -163.359, 577.961, -22.9688, -257.031, -254.719, -254.594, -349.531, 241.633, 294.063, 239.852, 302.688, -212.359, 144.719, 562.789, 78.6563, 562.383, 98.2109, 549.898, 99.7031, 562.789, 66.6328, -123.672, -396.32, 49.6797, 271.477, 498.102, 178.133, 485.563, -436.523, 497.063, -434.922, 497.422, -413.844, -286.547, 76.0391, 578.461, -194.898, 592.156, -192.594, 592.156, -175.023, 52.7422, -528.602, 414.922, -515.281, 418.273, -514.891, -255.898, 111.117, 577.102, 66.1875, 574.93, 66.6328, -269.938, 95.1328, 496.031, 205.352, 496.031, 209.43, 481.469, 213.102, 444.938, -483.258, 450.047, -482.461, 480.992, 241.023, 467.977, 244.453, 504.023, -403.172, 513.07, -403.172, 513.211, -403.133, 513.93, -381.18, 545.852, 126.203, 545.367, 129.219, 544.594, 129.344, 529.758, 128.922, 545.367, 112.25, 429.609, -499.008, 433.75, -498.25, 478.242, -451.477, 482.82, -450.672, 534.367, -324.211, -239.891, 126.289, 463.391, -466.813, 466.742, -466.242, 469.477, -455.242, -223.109, 142.008, -191.828, 191.578, 433.43, 267.109, 432.563, 268.852, 438.406, 257.094, 464.102, 256.133, 459.211, 257.094, 496.953, 191.938, 518.039, -374.18, 516.617, 128.922, 320.961, 282.844, 317.641, 286.18, 512.953, 142.523)
@@ -346,6 +348,19 @@ scale = Vector2(0.654506, 0.659023)
 position = Vector2(140, -455)
 shape = SubResource("CapsuleShape2D_aq45b")
 
+[node name="NewPiskel(10)2" type="Sprite2D" parent="Flowers"]
+position = Vector2(297, -758)
+scale = Vector2(0.67999, 0.67999)
+texture = ExtResource("5_k2xpx")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Flowers/NewPiskel(10)2"]
+position = Vector2(-91.1921, 306.76)
+scale = Vector2(0.654506, 0.659023)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Flowers/NewPiskel(10)2/StaticBody2D3"]
+position = Vector2(140, -455)
+shape = SubResource("CapsuleShape2D_aq45b")
+
 [node name="AllMobs" type="Node2D" parent="."]
 
 [node name="Player" parent="AllMobs" instance=ExtResource("6_bty1o")]
@@ -390,3 +405,76 @@ position = Vector2(1041, 377)
 
 [node name="Node2D8" parent="." instance=ExtResource("8_p5c1a")]
 position = Vector2(413, -1716)
+
+[node name="AmmoPack" parent="." instance=ExtResource("12_xrxow")]
+position = Vector2(335, -1525)
+
+[node name="AmmoPack2" parent="." instance=ExtResource("12_xrxow")]
+position = Vector2(763, -1778)
+
+[node name="AmmoPack3" parent="." instance=ExtResource("12_xrxow")]
+position = Vector2(811, -1525)
+
+[node name="MedKit" parent="." instance=ExtResource("13_k2xpx")]
+position = Vector2(432, -1641)
+
+[node name="MedKit2" parent="." instance=ExtResource("13_k2xpx")]
+position = Vector2(723, -1557)
+
+[node name="MedKit3" parent="." instance=ExtResource("13_k2xpx")]
+position = Vector2(616, -1876)
+
+[node name="NewPiskel(10)" type="Sprite2D" parent="."]
+position = Vector2(856, -1242)
+scale = Vector2(2.12, 2.12)
+texture = ExtResource("5_k2xpx")
+
+[node name="NewPiskel(10)5" type="Sprite2D" parent="."]
+position = Vector2(1340, -99)
+scale = Vector2(2.12, 2.12)
+texture = ExtResource("5_k2xpx")
+
+[node name="NewPiskel(10)6" type="Sprite2D" parent="."]
+position = Vector2(-188, 475)
+scale = Vector2(2.12, 2.12)
+texture = ExtResource("5_k2xpx")
+
+[node name="NewPiskel(10)7" type="Sprite2D" parent="."]
+position = Vector2(-188, 475)
+scale = Vector2(2.12, 2.12)
+texture = ExtResource("5_k2xpx")
+
+[node name="NewPiskel(10)8" type="Sprite2D" parent="."]
+position = Vector2(-720, 101)
+scale = Vector2(2.12, 2.12)
+texture = ExtResource("5_k2xpx")
+
+[node name="NewPiskel(10)9" type="Sprite2D" parent="."]
+position = Vector2(952, 594)
+scale = Vector2(2.12, 2.12)
+texture = ExtResource("5_k2xpx")
+
+[node name="NewPiskel(10)10" type="Sprite2D" parent="."]
+position = Vector2(1145, -884)
+scale = Vector2(2.12, 2.12)
+texture = ExtResource("5_k2xpx")
+
+[node name="NewPiskel(10)11" type="Sprite2D" parent="."]
+position = Vector2(-549, -761)
+scale = Vector2(2.12, 2.12)
+texture = ExtResource("5_k2xpx")
+
+[node name="NewPiskel(10)2" type="Sprite2D" parent="."]
+position = Vector2(229, -1258)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("5_k2xpx")
+
+[node name="NewPiskel(10)3" type="Sprite2D" parent="."]
+position = Vector2(278, -1257)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("5_k2xpx")
+
+[node name="NewPiskel(10)4" type="Sprite2D" parent="."]
+position = Vector2(254, -1256)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("5_k2xpx")

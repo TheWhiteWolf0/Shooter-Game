@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://bnglv4xn425t0"]
+[gd_scene load_steps=10 format=3 uid="uid://bnglv4xn425t0"]
 
 [ext_resource type="Script" uid="uid://b137xqymket6b" path="res://Scripts/ammo_pick_up.gd" id="1_gkw8x"]
 [ext_resource type="Texture2D" uid="uid://bl85egp3uthy3" path="res://Sprite Frames/New Piskel (6).png" id="2_gkw8x"]
+[ext_resource type="AudioStream" uid="uid://cq8gc1mrd13js" path="res://Audio/game-bonus-2-294436.mp3" id="3_yn5o3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nofbm"]
 size = Vector2(393.75, 78.3335)
@@ -59,5 +60,8 @@ scale = Vector2(11.75, 3.35714)
 sprite_frames = SubResource("SpriteFrames_yvft8")
 autoplay = "default"
 frame_progress = 0.515342
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_yn5o3")
 
 [connection signal="body_entered" from="AmmoPickUp" to="AmmoPickUp" method="_on_body_entered"]
