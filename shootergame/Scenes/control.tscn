@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://8suguyupkdoi"]
+[gd_scene load_steps=5 format=3 uid="uid://8suguyupkdoi"]
 
 [ext_resource type="Script" uid="uid://bctqa2ek4wto0" path="res://Scripts/Upgrades.gd" id="1_sjmnu"]
 [ext_resource type="Texture2D" uid="uid://cfn4an3odfido" path="res://Sprite Frames/pixelForrest.jpg" id="2_cgmvo"]
+[ext_resource type="Texture2D" uid="uid://k1yx3dl6i8qh" path="res://Audio/49661322_9259351.jpg" id="2_wpaqk"]
 [ext_resource type="AudioStream" uid="uid://ovu73mu6o0uc" path="res://Audio/MyHomemadeBGMusic.wav" id="3_vh8u0"]
 
 [node name="Control" type="Control"]
@@ -13,6 +14,11 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_sjmnu")
 
+[node name="496613229259351" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(0.384, 0.324)
+texture = ExtResource("2_wpaqk")
+
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(413, -1716)
 scale = Vector2(1, 1)
@@ -21,7 +27,7 @@ autoplay = true
 bus = &"BackGround"
 
 [node name="PixelForrest" type="Sprite2D" parent="."]
-position = Vector2(576, 324)
+position = Vector2(-656, 1240)
 scale = Vector2(1.7916, 1.8)
 texture = ExtResource("2_cgmvo")
 
@@ -85,6 +91,7 @@ offset_left = 24.0
 offset_top = 88.0
 offset_right = 131.0
 offset_bottom = 112.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Power: "
 metadata/_edit_use_anchors_ = true
 
@@ -101,6 +108,7 @@ offset_left = 24.0
 offset_top = 56.0
 offset_right = 64.0
 offset_bottom = 79.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Cost:"
 
 [node name="PlayerLevel" type="Label" parent="CanvasLayer"]
@@ -108,6 +116,7 @@ offset_left = 24.0
 offset_top = 24.0
 offset_right = 117.0
 offset_bottom = 47.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Player level:"
 
 [node name="Damage" type="Label" parent="CanvasLayer"]

@@ -48,8 +48,8 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 func enemydeath():
 	if enemy_health <= 0:
 		#$AudioStreamPlayer2D.play()
-		GlobalVariables.Currency = GlobalVariables.Currency + 5
-		GlobalVariables.player_Score = GlobalVariables.player_Score + 3
+		GlobalVariables.Currency = GlobalVariables.Currency + 6
+		GlobalVariables.player_Score = GlobalVariables.player_Score + 5
 		GlobalVariables.reserve_ammo = GlobalVariables.reserve_ammo + 5
 		var tree_instance = tree_death.instantiate()
 		tree_instance.global_position = $Area2D.global_position
