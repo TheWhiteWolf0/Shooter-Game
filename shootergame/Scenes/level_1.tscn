@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://b62m2xi8ulgk2" path="res://Sprite Frames/New Piskel (10).png" id="6_uy8f0"]
 [ext_resource type="PackedScene" uid="uid://d2noon1vftiyp" path="res://Scenes/Player.tscn" id="7_6r07y"]
 [ext_resource type="PackedScene" uid="uid://bjw3uvhgoe0aa" path="res://Scenes/hud.tscn" id="8_xrdnt"]
-[ext_resource type="AudioStream" uid="uid://dn3le81d0feta" path="res://Audio/happy-relaxing-loop-275536.mp3" id="9_wrinw"]
+[ext_resource type="AudioStream" uid="uid://ovu73mu6o0uc" path="res://Audio/MyHomemadeBGMusic.wav" id="9_wrinw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xrdnt"]
 texture = ExtResource("1_lsmp6")

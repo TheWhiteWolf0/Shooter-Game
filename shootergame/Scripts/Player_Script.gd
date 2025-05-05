@@ -67,6 +67,7 @@ func death():
 
 func _on_hit_box_area_entered(area: Area2D) -> void:
 	print("Player Hit")
+	$PlayerHit.play()
 	GlobalVariables.player_Health = GlobalVariables.player_Health - 20
 	if GlobalVariables.player_Health <= 0:
 		death()

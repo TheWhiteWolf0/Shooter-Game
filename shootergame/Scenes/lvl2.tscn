@@ -1,7 +1,7 @@
 [gd_scene load_steps=27 format=4 uid="uid://c0168coakp6ft"]
 
+[ext_resource type="AudioStream" uid="uid://ovu73mu6o0uc" path="res://Audio/MyHomemadeBGMusic.wav" id="1_k2xpx"]
 [ext_resource type="Texture2D" uid="uid://btlskccr8rifn" path="res://Sprout Lands - Sprites - Basic pack/Tilesets/Water.png" id="1_vplc7"]
-[ext_resource type="AudioStream" uid="uid://dn3le81d0feta" path="res://Audio/happy-relaxing-loop-275536.mp3" id="1_vruis"]
 [ext_resource type="Texture2D" uid="uid://dringsv7csl7o" path="res://Sprout Lands - Sprites - Basic pack/Tilesets/Grass.png" id="2_p5c1a"]
 [ext_resource type="Texture2D" uid="uid://b2wrnv1cqs6mt" path="res://Sprout Lands - Sprites - Basic pack/Objects/Wood_Bridge.png" id="3_vruis"]
 [ext_resource type="Texture2D" uid="uid://bwo67biqn1njn" path="res://Sprout Lands - Sprites - Basic pack/Objects/Basic_Grass_Biom_things.png" id="4_xrxow"]
@@ -289,7 +289,7 @@ height = 62.0
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(413, -1716)
-stream = ExtResource("1_vruis")
+stream = ExtResource("1_k2xpx")
 autoplay = true
 bus = &"BackGround"
 
