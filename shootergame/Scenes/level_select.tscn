@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://n5q48eoj5nb5"]
+[gd_scene load_steps=4 format=3 uid="uid://n5q48eoj5nb5"]
 
 [ext_resource type="Script" uid="uid://6wevlv4roey7" path="res://Scripts/level_select.gd" id="1_rp7yy"]
 [ext_resource type="Texture2D" uid="uid://cfn4an3odfido" path="res://Sprite Frames/pixelForrest.jpg" id="2_nkys2"]
+[ext_resource type="AudioStream" uid="uid://dn3le81d0feta" path="res://Audio/happy-relaxing-loop-275536.mp3" id="3_lx4vd"]
 
 [node name="LevelSelect" type="Control"]
 layout_mode = 3
@@ -59,6 +60,11 @@ theme_override_font_sizes/font_size = 94
 text = "Kodama"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_lx4vd")
+autoplay = true
+bus = &"BackGround"
 
 [connection signal="pressed" from="Level1" to="." method="_on_level_1_pressed"]
 [connection signal="pressed" from="Level2" to="." method="_on_level_2_pressed"]

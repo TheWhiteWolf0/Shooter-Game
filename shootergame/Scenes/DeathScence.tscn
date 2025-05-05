@@ -2,9 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b5cee57qog15l" path="res://Scripts/death_scence.gd" id="1_kedjp"]
 [ext_resource type="Texture2D" uid="uid://cfn4an3odfido" path="res://Sprite Frames/pixelForrest.jpg" id="1_o10et"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_kedjp"]
-font_color = Color(0.570573, 0.475907, 0.998121, 1)
+[ext_resource type="AudioStream" uid="uid://dn3le81d0feta" path="res://Audio/happy-relaxing-loop-275536.mp3" id="3_ro8w3"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -23,13 +21,14 @@ texture = ExtResource("1_o10et")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="score" type="Label" parent="CanvasLayer"]
-offset_left = 384.0
-offset_top = 240.0
-offset_right = 501.0
-offset_bottom = 263.0
-scale = Vector2(3.56, 3.56)
+offset_left = 256.0
+offset_top = 184.0
+offset_right = 764.0
+offset_bottom = 280.0
+scale = Vector2(1.12, 1.12)
+theme_override_colors/font_color = Color(0.741176, 0.780392, 0.121569, 1)
+theme_override_font_sizes/font_size = 70
 text = "Score Achivied "
-label_settings = SubResource("LabelSettings_kedjp")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -39,6 +38,7 @@ offset_top = 384.0
 offset_right = 937.0
 offset_bottom = 415.0
 scale = Vector2(2.43331, 2.05362)
+theme_override_colors/font_color = Color(0.219608, 0.682353, 0.815686, 1)
 text = "Level Select"
 
 [node name="Button2" type="Button" parent="CanvasLayer"]
@@ -47,6 +47,7 @@ offset_top = 384.0
 offset_right = 216.0
 offset_bottom = 417.0
 scale = Vector2(1.68, 1.96)
+theme_override_colors/font_color = Color(0.219608, 0.682353, 0.815686, 1)
 text = "play Again/ Reload"
 
 [node name="Button3" type="Button" parent="CanvasLayer"]
@@ -55,7 +56,13 @@ offset_top = 384.0
 offset_right = 530.0
 offset_bottom = 415.0
 scale = Vector2(3.14351, 2.01232)
+theme_override_colors/font_color = Color(0.219608, 0.682353, 0.815686, 1)
 text = "Upgrades"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_ro8w3")
+autoplay = true
+bus = &"BackGround"
 
 [connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/Button2" to="." method="_on_button_2_pressed"]

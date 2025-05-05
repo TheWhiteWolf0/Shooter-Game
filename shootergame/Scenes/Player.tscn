@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://b6tjlvlwgmbme" path="res://Scripts/Player_Script.gd" id="1_kyqiw"]
 [ext_resource type="Texture2D" uid="uid://cruvsxi4fnsq" path="res://Sprite Frames/New Piskel (7).png" id="2_kyqiw"]
 [ext_resource type="AudioStream" uid="uid://bsiapyuwmcksj" path="res://Audio/water-splash-102492.mp3" id="3_gntrk"]
-[ext_resource type="AudioStream" uid="uid://byv817mnc616h" path="res://Audio/water-191999.mp3" id="4_dewec"]
+[ext_resource type="AudioStream" uid="uid://br0qe67e0rr3i" path="res://Audio/water-reload-use.wav" id="4_dewec"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gntrk"]
 atlas = ExtResource("2_kyqiw")
