@@ -11,7 +11,7 @@ Video Demonstration: https://youtu.be/g8-QCr4VfTM
 
 Description of Project: In this game you play as a local villager helping the kodama(forest sprits) to replant the forest. The evil sprits refuse to let the seeds grow. So you as the protecter of the forest you must use water to help the seeds grow and free them of the evil sprits.
 
-How to Play: To play the game its "wasd" to move, "r" to reload when possible, you aim with your mouse cursor, right mouse button to shoot, "i" For level select. Survive in a wave like level to gain power to purchase upgrades, Including Player Speed and damage and how many shots of water you can shoot. Defeted enemys increase score, diffrent enemys (Chase-small and MultiHit-big) have diffrent scores when defeated but also diffrent speed and health. If you let the enemys live for too long there health and speed increase indefinitely. 
+How to Play: To play the game its "wasd" to move, "r" to reload when possible, you aim with your mouse cursor, right mouse button to shoot, "i" For level select. Survive in a wave like level to gain power to purchase upgrades, Including Player Speed and damage and how many shots of water you can shoot. Defeated enemys increase score, different enemys (Chase-small and MultiHit-big) have different scores when defeated but also different speed and health. If you let the enemys live for too long there health and speed increase indefinitely. 
 
 How it Works: All scripts are original, yes I watched some tutorial but most where out dated or I needed to modify to fit my needs. GDscript is like a cousin to python in witch I have experience using so my work flow didnt need to change much or even at all.
 
