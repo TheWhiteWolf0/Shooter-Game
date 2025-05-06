@@ -291,7 +291,6 @@ height = 62.0
 position = Vector2(413, -1716)
 stream = ExtResource("1_k2xpx")
 autoplay = true
-bus = &"BackGround"
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
 scale = Vector2(2.2469, 2.2315)

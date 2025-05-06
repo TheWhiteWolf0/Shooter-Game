@@ -70,7 +70,6 @@ vertical_alignment = 1
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_lx4vd")
 autoplay = true
-bus = &"BackGround"
 
 [connection signal="pressed" from="Level1" to="." method="_on_level_1_pressed"]
 [connection signal="pressed" from="Level2" to="." method="_on_level_2_pressed"]
