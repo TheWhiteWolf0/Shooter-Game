@@ -8,6 +8,7 @@ Games Programming, semester 2
 Project Title: Kodama (means forest sprit)
 
 Video Demonstration: https://youtu.be/g8-QCr4VfTM
+Itch: https://thewhitewolf05.itch.io/kodama
 
 Description of Project: In this game you play as a local villager helping the kodama(forest sprits) to replant the forest. The evil sprits refuse to let the seeds grow. So you as the protecter of the forest you must use water to help the seeds grow and free them of the evil sprits.
 
