@@ -13,7 +13,7 @@ extends CharacterBody2D
 #@onready var player: CharacterBody2D
 var reload_delay = false
 
-var bullet = preload("res://Scenes/Bullet.tscn")
+var bullet = preload("res://Scenes/bullet.tscn")
 
 func get_input():
 	var input_direction = Input.get_vector("Left", "Right", "Up", "Down")
@@ -23,12 +23,12 @@ func get_input():
 func player_weapon():
 	if GlobalVariables.mag_ammo == 0:
 		GlobalVariables.Can_reload = true
-	
+		
 	if Input.is_action_just_pressed("Shoot") and GlobalVariables.Can_Fire and GlobalVariables.mag_ammo > 0:
 		$AudioStreamPlayer2D.play()
 		fire()
 		GlobalVariables.mag_ammo = GlobalVariables.mag_ammo - 1
-
+		
 		
 	if Input.is_action_just_pressed("Reload") and GlobalVariables.Can_reload and GlobalVariables.reserve_ammo > 0 and GlobalVariables.mag_ammo == 0:
 		$ReloadDelay.start()
@@ -36,9 +36,6 @@ func player_weapon():
 		reload_delay == true
 		if reload_delay == true:
 			_on_timer_timeout()
-			
-		
-	return
 
 func _physics_process(delta):
 	get_input()
@@ -71,11 +68,9 @@ func _on_hit_box_area_entered(area: Area2D) -> void:
 	GlobalVariables.player_Health = GlobalVariables.player_Health - 20
 	if GlobalVariables.player_Health <= 0:
 		death()
-		
-	pass # Replace with function body.
-	
+
 
 func _on_timer_timeout() -> void:
 	GlobalVariables.mag_ammo = GlobalVariables.mag_ammo + GlobalVariables.mag_Capacity
 	GlobalVariables.reserve_ammo = GlobalVariables.reserve_ammo - GlobalVariables.mag_Capacity
-	pass # Replace with function body.
+#	pass # Replace with function body.
